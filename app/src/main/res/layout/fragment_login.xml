@@ -2,17 +2,21 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sendOtp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/custom_login_bk">
+    android:background="@drawable/custom_login_bk"
+    android:visibility="visible">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ivCILogin"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="15dp"
-        android:src="@drawable/ic_person"
+        android:layout_marginTop="4dp"
+        android:srccompat="@drawable/man"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,5 +54,64 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF5722"
+        android:text="Send OTP"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilPhoneNumber"
+        app:layout_constraintVertical_bias="0.154" />
+
+    <TextView
+        android:id="@+id/enterOtp"
+        android:layout_width="325dp"
+        android:layout_height="54dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Enter Your Otp Here"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.197" />
+
+    <TextView
+        android:id="@+id/cangeNo"
+        android:layout_width="143dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="44dp"
+        android:gravity="center"
+        android:hint="CHANGE Number"
+        android:textColorHint="#3F51B5"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/resendOtp"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterOtp"
+        app:layout_constraintVertical_bias="0.264" />
+
+    <TextView
+        android:id="@+id/resendOtp"
+        android:layout_width="134dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        android:hint="Resend OTP"
+        android:textColorHint="#3F51B5"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterOtp"
+        app:layout_constraintVertical_bias="0.257" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
