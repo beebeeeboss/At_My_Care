@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/sendOtp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/custom_login_bk"
@@ -12,8 +11,8 @@
         android:id="@+id/ivCILogin"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="4dp"
-        android:srccompat="@drawable/man"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/man"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -25,10 +24,12 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
+        android:textAlignment="center"
         android:background="@android:color/transparent"
         android:popupBackground="@android:color/white"
         android:spinnerMode="dialog"
         app:layout_constraintEnd_toEndOf="parent"
+        app:flow_horizontalBias="50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivCILogin" />
 
@@ -55,12 +56,13 @@
             app:layout_constraintTop_toTopOf="parent" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="0dp"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSendOTP"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FF5722"
+        android:background="@drawable/custom_btn_otp"
         android:text="Send OTP"
+        android:textColor="#72f"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -68,50 +70,47 @@
         app:layout_constraintTop_toBottomOf="@+id/tilPhoneNumber"
         app:layout_constraintVertical_bias="0.154" />
 
-    <TextView
-        android:id="@+id/enterOtp"
-        android:layout_width="325dp"
-        android:layout_height="54dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:hint="Enter Your Otp Here"
-        android:textSize="20sp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <com.mukesh.OtpView
+        android:id="@+id/ovReceivedOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:inputType="number"
+        android:itemBackground="@android:color/transparent"
+        android:textColor="@android:color/black"
+        app:OtpItemCount="6"
+        app:OtpLineColor="@android:color/holo_blue_dark"
+        app:OtpViewType="line"
+        app:OtpHideLineWhenFilled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.197" />
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/btnSendOTP" />
 
     <TextView
-        android:id="@+id/cangeNo"
-        android:layout_width="143dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="44dp"
-        android:gravity="center"
-        android:hint="CHANGE Number"
-        android:textColorHint="#3F51B5"
-        android:textSize="16sp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/resendOtp"
-        app:layout_constraintHorizontal_bias="0.86"
+        android:id="@+id/tvResendOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:text="Resend OTP"
+        android:textColor="#00f"
+        android:textSize="14sp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterOtp"
-        app:layout_constraintVertical_bias="0.264" />
-
+        app:layout_constraintTop_toBottomOf="@+id/ovReceivedOtp" />
     <TextView
-        android:id="@+id/resendOtp"
-        android:layout_width="134dp"
-        android:layout_height="36dp"
-        android:layout_marginEnd="32dp"
-        android:gravity="center"
-        android:hint="Resend OTP"
-        android:textColorHint="#3F51B5"
-        android:textSize="16sp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/tvChangeNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="10dp"
+        android:text="Change Number"
+        android:textColor="#00f"
+        android:textSize="14sp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterOtp"
-        app:layout_constraintVertical_bias="0.257" />
+        app:layout_constraintTop_toBottomOf="@+id/ovReceivedOtp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
