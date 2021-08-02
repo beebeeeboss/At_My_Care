@@ -70,22 +70,26 @@
         app:layout_constraintTop_toBottomOf="@+id/tilPhoneNumber"
         app:layout_constraintVertical_bias="0.154" />
 
-    <com.mukesh.OtpView
+    <in.aabhasjindal.otptextview.OtpTextView
         android:id="@+id/ovReceivedOtp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:inputType="number"
-        android:itemBackground="@android:color/transparent"
+        app:height="40dp"
+        app:width="40dp"
+        app:bar_enabled="true"
+        app:bar_height="2dp"
+        app:length="6"
+        app:bar_success_color="#0f0"
+        app:bar_error_color="#f00"
+        app:otp_text_size="24dp"
+        app:bar_active_color="#00f"
+        app:bar_inactive_color="@android:color/transparent"
         android:textColor="@android:color/black"
-        app:OtpItemCount="6"
-        app:OtpLineColor="@android:color/holo_blue_dark"
-        app:OtpViewType="line"
-        app:OtpHideLineWhenFilled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@+id/btnSendOTP" />
+        app:layout_constraintTop_toBottomOf="@id/btnSendOTP"
+        />
 
     <TextView
         android:id="@+id/tvResendOTP"
