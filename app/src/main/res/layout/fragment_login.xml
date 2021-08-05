@@ -7,17 +7,26 @@
     android:background="@drawable/custom_login_bk"
     android:visibility="visible">
 
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="72dp"
+        android:background="@drawable/top_bar_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ivCILogin"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="54dp"
         android:src="@drawable/man"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/view2" />
 
     <Spinner
         android:id="@+id/spLoginType"
@@ -39,6 +48,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/spLoginType">
@@ -50,6 +60,7 @@
             android:hint="Please Enter Your Number Here"
             android:inputType="number"
             android:maxLength="10"
+            android:textColorHint="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +73,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/custom_btn_otp"
         android:text="Send OTP"
-        android:textColor="#72f"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -70,26 +81,37 @@
         app:layout_constraintTop_toBottomOf="@+id/tilPhoneNumber"
         app:layout_constraintVertical_bias="0.154" />
 
-    <in.aabhasjindal.otptextview.OtpTextView
-        android:id="@+id/ovReceivedOtp"
+    <LinearLayout
+        android:id="@+id/llOtp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        app:height="40dp"
-        app:width="40dp"
-        app:bar_enabled="true"
-        app:bar_height="2dp"
-        app:length="6"
-        app:bar_success_color="#0f0"
-        app:bar_error_color="#f00"
-        app:otp_text_size="24dp"
-        app:bar_active_color="#00f"
-        app:bar_inactive_color="@android:color/transparent"
-        android:textColor="@android:color/black"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnSendOTP"
-        />
+        app:layout_constraintTop_toBottomOf="@id/spLoginType">
+
+        <in.aabhasjindal.otptextview.OtpTextView
+            android:id="@+id/ovReceivedOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@android:color/black"
+            app:bar_active_color="#00f"
+            app:bar_enabled="true"
+            app:bar_error_color="#f00"
+            app:bar_height="2dp"
+            app:bar_inactive_color="@android:color/transparent"
+            app:bar_success_color="#0f0"
+            app:height="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnSendOTP"
+            app:length="6"
+            app:otp_text_size="24dp"
+            app:width="40dp" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvResendOTP"
@@ -102,19 +124,32 @@
         android:textSize="14sp"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ovReceivedOtp" />
+        app:layout_constraintTop_toBottomOf="@id/llOtp" />
+
     <TextView
         android:id="@+id/tvChangeNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="35dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
         android:text="Change Number"
         android:textColor="#00f"
         android:textSize="14sp"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ovReceivedOtp" />
+        app:layout_constraintTop_toBottomOf="@id/llOtp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Login DashBoard"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
