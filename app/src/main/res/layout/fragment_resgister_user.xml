@@ -1,134 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ui.ResgisterUserFragment">
+
+<View
+    android:id="@+id/viewAddUserFormDetails"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.ResgisterUserFragment">
+    android:layout_height="100dp"
+    android:background="@drawable/top_bar_shape"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+<LinearLayout
+    android:id="@+id/llAddUserFormDashboard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal"
+    android:weightSum="5"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imageView3"
+    <ImageButton
+        android:id="@+id/ibBackFromRegisterUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:background="?attr/selectableItemBackground"
+        android:padding="8dp"
+        android:src="@drawable/ic_back" />
+
+    <TextView
+        android:id="@+id/tvAddUserFormDashboardTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_weight="4"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.025"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="Name From Prev Frag"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
+
+    <ScrollView
+        android:id="@+id/svAddUserForm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewAddUserFormDetails">
+
+        <LinearLayout
+            android:id="@+id/llAddUserForm"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_weight=".2"
-            tools:ignore="ImageContrastCheck"
-            tools:src="@tools:sample/avatars" />
-
-        <Spinner
-            android:id="@+id/registerUser"
-            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:textAlignment="center"
-            android:background="@android:color/transparent"
-            android:popupBackground="@android:color/white"
-            android:spinnerMode="dialog"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:flow_horizontalBias="50"
-            app:layout_constraintStart_toStartOf="parent"
-            />
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:weightSum="8">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etFullName"
-            android:layout_width="358dp"
-            android:layout_height="0dp"
-            android:layout_weight=".4"
-            android:backgroundTint="#B9A999C6"
-            android:gravity="center"
-            android:hint="Full Name"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:hint="Name">
 
-            android:maxLength="100"
-            android:paddingHorizontal="40dp"
-            android:paddingVertical="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/imageView3"
-            app:layout_constraintStart_toStartOf="@id/imageView3"
-            app:layout_constraintTop_toTopOf="parent" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etEmail"
-            android:layout_width="358dp"
-            android:layout_height="0dp"
-            android:layout_weight=".4"
-            android:backgroundTint="#B9A999C6"
-            android:gravity="center"
-            android:hint="E-mail"
-            android:inputType="number"
-            android:maxLength="100"
-            android:paddingHorizontal="40dp"
-            android:paddingVertical="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:hint="Email">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etNumber"
-            android:layout_width="358dp"
-            android:layout_height="0dp"
-            android:layout_weight=".4"
-            android:backgroundTint="#B9A999C6"
-            android:gravity="center"
-            android:hint="Mobile Number"
-            android:inputType="number"
-            android:maxLength="10"
-            android:paddingHorizontal="40dp"
-            android:paddingVertical="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textEmailAddress" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etAdress"
-            android:layout_width="358dp"
-            android:layout_height="0dp"
-            android:layout_weight=".4"
+            </com.google.android.material.textfield.TextInputLayout>
 
-            android:backgroundTint="#B9A999C6"
-            android:gravity="center|clip_vertical"
-            android:hint="Address"
-            android:maxLength="250"
-            android:paddingHorizontal="40dp"
-            android:paddingVertical="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputMobileNumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:hint="Mobile Number">
 
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".2"
-            android:checked="true"
-            android:text="I'm in for emails wit exciting discounts and personalized recommendations" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    android:maxLength="10" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnRegisterMe"
-            android:layout_width="398dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".1"
-            android:background="@drawable/custom_btn_otp"
-            android:backgroundTint="#D84C4C"
-            android:paddingHorizontal="20sp"
-            android:paddingVertical="20sp"
-            android:text="Register Me"
-            android:textColor="#673AB7"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etAdress"
-            app:layout_constraintVertical_bias="0.154" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputCity"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:hint="City">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLocality"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:hint="Locality">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLocality"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-    </LinearLayout>
-</FrameLayout>
+            <LinearLayout
+                android:id="@+id/llAddUserFormTermsAndCondition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <CheckBox
+                    android:id="@+id/cvAddUserFormTermsAndCondition"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tvAddUserFormTermsAndCondition"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:paddingStart="8dp"
+                    android:text="I'm in for emails wit exciting discounts and personalized recommendations"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRegisterUser"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_btn_otp"
+                android:text="Register Me"
+                android:textColor="@color/white"
+                android:textColorHighlight="#ff0" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
