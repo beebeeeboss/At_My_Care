@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.UserDashboardFragment"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <View
         android:id="@+id/view2"
         android:layout_width="wrap_content"
@@ -13,21 +14,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_marginStart="70dp"
-        android:weightSum="3">
+        android:weightSum="3"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintBottom_toBottomOf="@id/view2">
+
         <TextView
             android:id="@+id/textView"
-            android:layout_weight="2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="2"
+            android:gravity="center"
             android:text="User DashBoard"
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
@@ -35,11 +38,226 @@
         <ImageView
             android:id="@+id/ivLogoutUser"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginTop="5dp"
+            android:layout_marginRigt="8dp"
             android:layout_weight="1"
             android:scaleType="center"
             android:src="@drawable/ic_logout" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/a2"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_marginTop="35dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingHorizontal="20sp"
+                        android:paddingVertical="20sp"
+                        android:src="@android:drawable/ic_menu_search" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:paddingHorizontal="20sp"
+                        android:text="Search by hospital name"
+                        android:textSize="24sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginTop_toBottomOf="@id/a2"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingHorizontal="20sp"
+                        android:paddingVertical="20sp"
+                        android:src="@android:drawable/ic_menu_search" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:paddingHorizontal="20sp"
+                        android:text="Search by Doctor,Speciality,Symptoms"
+                        android:textSize="24sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="bottom"
+                    android:text="What are you looking for?"
+                    android:textSize="28sp" />
+
+                <LinearLayout
+                    android:id="@+id/a3"
+                    android:layout_width="match_parent"
+                    android:layout_height="90sp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingHorizontal="5sp"
+                        android:src="@drawable/book" />
+
+                    <TextView
+                        android:id="@+id/t4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:paddingHorizontal="5sp"
+                        android:text="Book  Appointment"
+                        android:textSize="34sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90sp"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginTop_toBottomOf="@id/a2"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingHorizontal="5sp"
+                        android:src="@drawable/book2" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:paddingHorizontal="5sp"
+                        android:text="Book health checkup"
+                        android:textSize="34sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="horizontal">
+
+                    <ScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+                    </ScrollView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="230dp"
+                            android:layout_height="match_parent"
+                            android:paddingHorizontal="20sp"
+                            android:paddingVertical="40sp"
+                            android:src="@drawable/book2" />
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="230dp"
+                            android:layout_height="match_parent"
+                            android:paddingHorizontal="20sp"
+                            android:paddingVertical="40sp"
+                            android:src="@drawable/book2" />
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="230dp"
+                            android:layout_height="match_parent"
+                            android:paddingHorizontal="20sp"
+                            android:paddingVertical="40sp"
+                            android:src="@drawable/book2" />
+
+                        <ImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="230dp"
+                            android:layout_height="match_parent"
+                            android:paddingHorizontal="20sp"
+                            android:paddingVertical="40sp"
+                            android:src="@drawable/book2" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/book3"
+                    android:layout_marginTop="30dp"
+
+                    android:layout_marginTop_toBottomOf="@id/l2"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+
     </LinearLayout>
 
 
