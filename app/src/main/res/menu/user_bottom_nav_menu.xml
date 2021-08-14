@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bnHome"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/bnServices"
+        android:enabled="true"
+        android:icon="@drawable/stethoscope"
+        android:title="Services"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/bnBuyMedicines"
+        android:icon="@drawable/ic_buy"
+        android:title="Item"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/bnNotifications"
+        android:enabled="true"
+        android:icon="@drawable/ic_notifications"
+        android:title="Notifications"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/bnAccount"
+        android:enabled="true"
+        android:icon="@drawable/ic_account"
+        android:title="Account"
+        app:showAsAction="withText" />
+</menu>
