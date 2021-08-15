@@ -7,6 +7,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.os.CountDownTimer;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +29,8 @@ public class UserDashboardFragment extends Fragment {
     private FragmentUserDashboardBinding bindings;
     private UserContentAdapter mUserContentAdapter;
     private List<Integer> imageResourceList;
+    private CountDownTimer forContent;
+    private int count = 0;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -52,5 +56,26 @@ public class UserDashboardFragment extends Fragment {
         imageResourceList.add(R.drawable.heart);
         mUserContentAdapter = new UserContentAdapter(getContext() , imageResourceList );
         mUserContentAdapter.notifyDataSetChanged();
+
+        forContent = new CountDownTimer(15000,5000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                bindings.rvContentInUser.scrollToPosition(count++);
+            }
+
+            @Override
+            public void onFinish() {
+                count = 0;
+                bindings.rvContentInUser.scrollToPosition(0);
+              forContent.start();
+            }
+        };
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                forContent.start();
+            }
+        },8000);
+
     }
 }
