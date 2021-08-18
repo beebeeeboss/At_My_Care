@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import com.pharmacy.atmycare.ui.StarterActivity;
 
 public class SplashActivity extends AppCompatActivity {
-
+//guyguyguygyu
     private ImageView mImageView;
     private static boolean isUserFirstTimeOpenApp = true;
     @Override
