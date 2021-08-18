@@ -43,6 +43,7 @@ public class SplashActivity extends AppCompatActivity {
                 }
             },2000);
         }
+        //hello
         else
         {
             Intent intent = new Intent(SplashActivity.this , StarterActivity.class);
