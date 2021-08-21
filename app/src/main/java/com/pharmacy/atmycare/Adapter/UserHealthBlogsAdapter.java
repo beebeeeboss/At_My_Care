@@ -51,11 +51,11 @@ public class UserHealthBlogsAdapter extends RecyclerView.Adapter<UserHealthBlogs
 
         public UserHealthDataViewHolder(@NonNull View itemView) {
             super(itemView);
-            ivHealthBlog = itemView.findViewById(R.id.ivHealthBlog);
-            tvSmallTitle =  itemView.findViewById(R.id.tvSmallTitle);
-            tvBigTitle = itemView.findViewById(R.id.tvHealthBlogBigTiltle);
+            ivHealthBlog = itemView.findViewById(R.id.vvVideoBlog);
+            tvSmallTitle =  itemView.findViewById(R.id.vtvSmallTitle);
+            tvBigTitle = itemView.findViewById(R.id.vtvHealthBlogBigTiltle);
             tvDescription = itemView.findViewById(R.id.tvHealthBlogDescription);
-            tvLikes = itemView.findViewById(R.id.tvHealthBlogLikes);
+            tvLikes = itemView.findViewById(R.id.vtvHealthBlogLikes);
         }
     }
 }

@@ -15,14 +15,14 @@
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cvHealthBlogImage"
+            android:id="@+id/cvHealthBlogVideo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:cardCornerRadius="14dp"
             app:cardPreventCornerOverlap="true">
 
             <ImageView
-                android:id="@+id/ivHealthBlog"
+                android:id="@+id/vvVideoBlog"
                 android:layout_width="match_parent"
                 android:layout_height="235dp"
                 android:scaleType="fitXY"
@@ -37,7 +37,7 @@
             android:weightSum="4">
 
             <TextView
-                android:id="@+id/tvSmallTitle"
+                android:id="@+id/vtvSmallTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -47,7 +47,7 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/tvHealthBlogLikes"
+                android:id="@+id/vtvHealthBlogLikes"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -58,7 +58,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/tvHealthBlogBigTiltle"
+            android:id="@+id/vtvHealthBlogBigTiltle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
