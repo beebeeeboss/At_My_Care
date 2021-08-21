@@ -2,25 +2,25 @@ package com.pharmacy.atmycare.model;
 
 public class Video_User {
 
-    private int videoResourceID;
+    private String videoResourceURL;
     private String smallTitle;
     private int noOfLikes;
     private String bigTitle;
 
-    public Video_User(int videoResourceID, String smallTitle, int noOfLikes, String bigTitle) {
-        this.videoResourceID = videoResourceID;
+    public Video_User(String videoResourceURL, String smallTitle, int noOfLikes, String bigTitle) {
+        this.videoResourceURL = videoResourceURL;
         this.smallTitle = smallTitle;
         this.noOfLikes = noOfLikes;
         this.bigTitle = bigTitle;
 
     }
 
-    public int getVideoResourceID() {
-        return videoResourceID;
+    public String getVideoResourceURL() {
+        return videoResourceURL;
     }
 
-    public void setVideoResourceID(int videoResourceID) {
-        this.videoResourceID = videoResourceID;
+    public void setVideoResourceURL(String videoResourceURL) {
+        this.videoResourceURL = videoResourceURL;
     }
 
     public String getSmallTitle() {
