@@ -82,7 +82,8 @@
         android:id="@+id/btnSendOTP"
         android:layout_width="175dp"
         android:layout_height="44dp"
-        android:background="@android:color/holo_blue_dark"
+
+        android:background="@drawable/custom_btn_otp"
         android:text="Send OTP"
         android:textColor="#FFFFFF"
         android:textSize="19sp"

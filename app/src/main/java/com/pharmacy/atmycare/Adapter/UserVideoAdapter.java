@@ -8,29 +8,36 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerSupportFragment;
+import com.google.android.youtube.player.YouTubePlayerView;
 import com.pharmacy.atmycare.R;
 import com.pharmacy.atmycare.model.Video_User;
-import com.pharmacy.atmycare.util.VideoPreparedCallBack;
 
 import java.util.List;
 
-public class UserVideoAdapter extends RecyclerView.Adapter<UserVideoAdapter.UserVideoViewHolder> {
+public class UserVideoAdapter extends RecyclerView.Adapter<UserVideoAdapter.UserVideoViewHolder>  {
 
     private Context context;
     private List<Video_User> videoHealthDataList;
-    private VideoPreparedCallBack mVideoPreparedCallBack;
-    public UserVideoAdapter(Context context, List<Video_User> videoHealthDataList , VideoPreparedCallBack videoPreparedCallBack) {
+    public UserVideoAdapter(Context context, List<Video_User> videoHealthDataList) {
         this.context = context;
         this.videoHealthDataList = videoHealthDataList;
-        this.mVideoPreparedCallBack = videoPreparedCallBack;
+
     }
 
     @NonNull
@@ -44,19 +51,7 @@ public class UserVideoAdapter extends RecyclerView.Adapter<UserVideoAdapter.User
     public void onBindViewHolder(@NonNull UserVideoAdapter.UserVideoViewHolder holder, int position) {
 
         try {
-
-            MediaController mediaController = new MediaController(context);
-            Uri videoURI = Uri.parse(videoHealthDataList.get(position).getVideoResourceURL());
-
-            holder.vvVideoVlog.setMediaController(mediaController);
-            holder.vvVideoVlog.setVideoURI(videoURI);
-
-            holder.vvVideoVlog.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mp) {
-                     mVideoPreparedCallBack.videoHasPrepared(holder.vvVideoVlog,mp);
-                }
-            });
+            holder.vvVideoVlog.loadUrl(videoHealthDataList.get(position).getVideoResourceURL());
 
         } catch (Exception e) {
             System.out.println("Video Play Error :" + e.getMessage());
@@ -71,7 +66,7 @@ public class UserVideoAdapter extends RecyclerView.Adapter<UserVideoAdapter.User
     public int getItemCount() { return videoHealthDataList.size();}
 
     public static class UserVideoViewHolder extends RecyclerView.ViewHolder {
-        private VideoView vvVideoVlog;
+        private WebView vvVideoVlog;
         private TextView vtvSmallTitle , vtvBigTitle, vtvLikes;
 
         public UserVideoViewHolder(@NonNull View itemView) {
@@ -80,6 +75,9 @@ public class UserVideoAdapter extends RecyclerView.Adapter<UserVideoAdapter.User
             vtvSmallTitle = itemView.findViewById(R.id.vtvSmallTitle);
             vtvBigTitle = itemView.findViewById(R.id.vtvHealthBlogBigTiltle);
             vtvLikes = itemView.findViewById(R.id.vtvHealthBlogLikes);
+            vvVideoVlog.getSettings().setJavaScriptEnabled(true);
+            vvVideoVlog.setWebViewClient(new WebViewClient());
+            vvVideoVlog.setWebChromeClient(new WebChromeClient());
         }
     }
 }

@@ -6,9 +6,10 @@ import androidx.navigation.NavHostController;
 
 import android.os.Bundle;
 
+import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.pharmacy.atmycare.R;
 
-public class StarterActivity extends AppCompatActivity {
+public class StarterActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

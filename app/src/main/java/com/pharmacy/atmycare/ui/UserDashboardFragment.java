@@ -18,6 +18,8 @@ import android.widget.VideoView;
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerView;
 import com.pharmacy.atmycare.Adapter.UserContentAdapter;
 import com.pharmacy.atmycare.Adapter.UserHealthBlogsAdapter;
 import com.pharmacy.atmycare.Adapter.UserVideoAdapter;
@@ -25,13 +27,13 @@ import com.pharmacy.atmycare.R;
 import com.pharmacy.atmycare.databinding.FragmentUserDashboardBinding;
 import com.pharmacy.atmycare.model.HealthBlog_User;
 import com.pharmacy.atmycare.model.Video_User;
-import com.pharmacy.atmycare.util.VideoPreparedCallBack;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class UserDashboardFragment extends Fragment implements VideoPreparedCallBack {
+public class UserDashboardFragment extends Fragment {
 
     private FragmentUserDashboardBinding bindings;
     private UserContentAdapter mUserContentAdapter;
@@ -59,7 +61,7 @@ public class UserDashboardFragment extends Fragment implements VideoPreparedCall
         videoDataList = new ArrayList<>();
         mUserContentAdapter = new UserContentAdapter(getContext() , imageResourceList );
         mUserHealthBlogsAdapter = new UserHealthBlogsAdapter(getContext() , healthDataList);
-        mUserVideoAdapter = new UserVideoAdapter(getContext() , videoDataList ,this);
+        mUserVideoAdapter = new UserVideoAdapter(getContext() , videoDataList );
         bindings.rvContentInUser.setLayoutManager(new LinearLayoutManager(getContext() , LinearLayoutManager.HORIZONTAL , false));
         bindings.rvHealthBlogs.setLayoutManager(new LinearLayoutManager(getContext() , LinearLayoutManager.HORIZONTAL , false));
         bindings.rvVideo.setLayoutManager(new LinearLayoutManager(getContext() , LinearLayoutManager.HORIZONTAL , false));
@@ -82,9 +84,9 @@ public class UserDashboardFragment extends Fragment implements VideoPreparedCall
 
         mUserHealthBlogsAdapter.notifyDataSetChanged();
 
-      videoDataList.add(new Video_User("https://cdn.videvo.net/videvo_files/video/free/2015-09/small_watermarked/Search_Google_preview.webm","Mind Over Matters",15,"Body Dysmorphia"));
-        videoDataList.add(new Video_User("https://youtu.be/Y3sOM_yz6Fo","Nutrition in Helathy Life",24,"Nutrition in Helathy LifeNutrition in Helathy Life"));
-        videoDataList.add(new Video_User("https://www.youtube.com/watch?v=zSguDQRjZv0","Determinants of Helath",32,"Determinants of Helath"));
+      videoDataList.add(new Video_User("https://www.youtube.com/embed/p4Pqllj4UV8","Mind Over Matters",15,"Body Dysmorphia"));
+        videoDataList.add(new Video_User("https://www.youtube.com/embed/c06dTj0v0sM","Nutrition in Helathy Life",24,"Nutrition in Helathy LifeNutrition in Helathy Life"));
+        videoDataList.add(new Video_User("https://www.youtube.com/embed/zSguDQRjZv0","Determinants of Helath",32,"Determinants of Helath"));
 
         mUserVideoAdapter.notifyDataSetChanged();
         forContent = new CountDownTimer(15000,5000) {
@@ -111,8 +113,5 @@ public class UserDashboardFragment extends Fragment implements VideoPreparedCall
 
     }
 
-    @Override
-    public void videoHasPrepared(VideoView view, MediaPlayer mp) {
-        view.start();
-    }
+
 }

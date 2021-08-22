@@ -63,6 +63,7 @@ public class LoginFragment extends Fragment {
                     binding.etPhoneNumber.setEnabled(false);
                     binding.tilPhoneNumber.setVisibility(View.GONE);
                     binding.btnSendOTP.setVisibility(View.GONE);
+                    binding.spLoginType.setVisibility(View.GONE);
                     binding.llOtp.setVisibility(View.VISIBLE);
                     binding.tvResendOTP.setVisibility(View.VISIBLE);
                     binding.tvChangeNumber.setVisibility(View.VISIBLE);
@@ -103,6 +104,7 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 binding.etPhoneNumber.setEnabled(true);
+                binding.spLoginType.setVisibility(View.VISIBLE);
                 binding.tilPhoneNumber.setVisibility(View.VISIBLE);
                 binding.btnSendOTP.setVisibility(View.VISIBLE);
                 binding.llOtp.setVisibility(View.GONE);
