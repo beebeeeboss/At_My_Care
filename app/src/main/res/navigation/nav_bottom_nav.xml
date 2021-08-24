@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_bottom_nav"
+    app:startDestination="@id/homeUserFragment">
+    <fragment
+        android:id="@+id/homeUserFragment"
+        android:name="com.pharmacy.atmycare.ui.HomeUserFragment"
+        android:label="fragment_home_user"
+        tools:layout="@layout/fragment_home_user" />
+    <fragment
+        android:id="@+id/coursesUserFragment"
+        android:name="com.pharmacy.atmycare.ui.CoursesUserFragment"
+        android:label="fragment_courses_user"
+        tools:layout="@layout/fragment_courses_user" />
+    <fragment
+        android:id="@+id/buyMedicinesUserFragment"
+        android:name="com.pharmacy.atmycare.ui.BuyMedicinesUserFragment"
+        android:label="fragment_buy_medicines_user"
+        tools:layout="@layout/fragment_buy_medicines_user" />
+    <fragment
+        android:id="@+id/notificationsUserFragment"
+        android:name="com.pharmacy.atmycare.ui.NotificationsUserFragment"
+        android:label="fragment_notifications_user"
+        tools:layout="@layout/fragment_notifications_user" />
+    <fragment
+        android:id="@+id/accountUserFragment"
+        android:name="com.pharmacy.atmycare.ui.AccountUserFragment"
+        android:label="fragment_account_user"
+        tools:layout="@layout/fragment_account_user" />
+</navigation>

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeUserFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:id="@+id/svUserDashboard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSelectedHospital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/gdSelectedHospital"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="5dp"
+                    app:columnCount="5"
+                    app:rowCount="2">
+
+                    <ImageView
+                        android:id="@+id/ivChangeLocationSelectedHospital"
+                        android:scaleType="fitCenter"
+                        app:layout_column="0"
+                        app:layout_columnWeight="2"
+                        app:layout_row="0"
+                        app:layout_rowSpan="2"
+                        app:layout_rowWeight="2"
+                        app:srcCompat="@drawable/ic_location" />
+
+                    <TextView
+
+                        android:fontFamily="@font/timmana"
+                        android:gravity="center_horizontal"
+                        android:text="Selected Hospital"
+                        android:textColor="#2896BC"
+                        android:textSize="18sp"
+                        app:layout_column="1"
+                        app:layout_columnWeight="3"
+                        app:layout_row="0"
+                        app:layout_rowWeight="1" />
+
+                    <TextView
+                        android:id="@+id/tvSelectedHospital"
+                        android:fontFamily="@font/lato"
+                        android:gravity="center_horizontal"
+                        android:text="Name of Selected Hospital From Server"
+                        android:textSize="18sp"
+                        app:layout_column="1"
+                        app:layout_columnWeight="3"
+                        app:layout_row="1"
+                        app:layout_rowWeight="1" />
+                </androidx.gridlayout.widget.GridLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSearchUserDashBoard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="7">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:fontFamily="@font/lato"
+                        android:gravity="center_vertical"
+                        android:text="Search by Doctor , Speciality and Symptoms..."
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/ivSearchUserDashboard"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_search" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/timmana"
+                android:text="What are you looking for?"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/gdChooseService"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                app:columnCount="2"
+                app:rowCount="3">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvBookAppointment"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="10dp"
+                    app:layout_column="0"
+                    app:layout_columnSpan="1"
+                    app:layout_columnWeight="1"
+                    app:layout_row="0"
+                    app:layout_rowSpan="1"
+                    app:layout_rowWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="2"
+                            android:src="@drawable/stethoscope" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/lato"
+                            android:gravity="center"
+                            android:text="Book
+                            Appointment"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvBookHealthCheckup"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="10dp"
+                    app:layout_column="0"
+                    app:layout_columnSpan="1"
+                    app:layout_columnWeight="1"
+                    app:layout_row="1"
+                    app:layout_rowSpan="1"
+                    app:layout_rowWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="2"
+                            android:src="@drawable/heart" />
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/lato"
+                            android:gravity="center"
+                            android:text="Book
+                            Health  Checkup"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvBookWebinar"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="10dp"
+                    app:layout_column="0"
+                    app:layout_columnSpan="1"
+                    app:layout_columnWeight="1"
+                    app:layout_row="2"
+                    app:layout_rowSpan="1"
+                    app:layout_rowWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="2"
+                            android:src="@drawable/webinar" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/lato"
+                            android:gravity="center"
+                            android:text="Book
+                                Webinar"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.gridlayout.widget.GridLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvContentInUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/timmana"
+                    android:text="Health Blogs"
+                    android:textAlignment="textStart"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvSeeAllHealthBlogs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/timmana"
+                    android:text="See all"
+                    android:textAlignment="textEnd"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHealthBlogs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/timmana"
+                    android:text="Videos"
+                    android:textAlignment="textStart"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvSeeAllVideos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/timmana"
+                    android:text="See all"
+                    android:textAlignment="textEnd"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

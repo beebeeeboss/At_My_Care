@@ -13,9 +13,6 @@
         <action
             android:id="@+id/action_loginFragment_to_resgisterUserFragment"
             app:destination="@id/resgisterUserFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_userDashboardFragment"
-            app:destination="@id/userDashboardFragment" />
     </fragment>
     <fragment
         android:id="@+id/resgisterUserFragment"
@@ -29,6 +26,5 @@
     <fragment
         android:id="@+id/userDashboardFragment"
         android:name="com.pharmacy.atmycare.ui.UserDashboardFragment"
-        android:label="fragment_user_dashboard"
-        tools:layout="@layout/fragment_user_dashboard" />
+        android:label="UserDashboardFragment" />
 </navigation>

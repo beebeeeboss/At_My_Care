@@ -9,15 +9,15 @@
         android:title="Home"
         app:showAsAction="withText" />
     <item
-        android:id="@+id/bnServices"
+        android:id="@+id/bnCourses"
         android:enabled="true"
-        android:icon="@drawable/stethoscope"
-        android:title="Services"
+        android:icon="@drawable/ic_courses"
+        android:title="Courses"
         app:showAsAction="withText" />
     <item
         android:id="@+id/bnBuyMedicines"
         android:icon="@drawable/ic_buy"
-        android:title="Item"
+        android:title="Buy"
         app:showAsAction="withText" />
     <item
         android:id="@+id/bnNotifications"

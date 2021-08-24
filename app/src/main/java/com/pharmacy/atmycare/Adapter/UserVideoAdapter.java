@@ -21,10 +21,7 @@ import android.widget.VideoView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.youtube.player.YouTubeInitializationResult;
-import com.google.android.youtube.player.YouTubePlayer;
-import com.google.android.youtube.player.YouTubePlayerSupportFragment;
-import com.google.android.youtube.player.YouTubePlayerView;
+
 import com.pharmacy.atmycare.R;
 import com.pharmacy.atmycare.model.Video_User;
 
