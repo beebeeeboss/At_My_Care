@@ -26,5 +26,12 @@
     <fragment
         android:id="@+id/userDashboardFragment"
         android:name="com.pharmacy.atmycare.ui.UserDashboardFragment"
-        android:label="UserDashboardFragment" />
+        android:label="UserDashboardFragment" >
+        <action
+            android:id="@+id/action_userDashboardFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/nav_graph" />
+    </fragment>
 </navigation>
