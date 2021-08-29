@@ -151,7 +151,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/custom_button_square_filled"
                     android:elevation="8dp"
-                    android:text="Manage Members"
+                    android:text="Complete Profile"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="14sp"
