@@ -5,60 +5,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.UserDashboardFragment"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <View
-        android:id="@+id/view2"
-        android:layout_width="wrap_content"
-        android:layout_height="52dp"
-        android:background="@drawable/top_bar_shape"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:weightSum="3"
-        app:layout_constraintTop_toTopOf="@+id/view2"
-        app:layout_constraintBottom_toBottomOf="@id/view2">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
-            android:layout_weight="2"
-            android:gravity="center"
-            android:text="User DashBoard"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp" />
-
-        <ImageView
-            android:id="@+id/ivLogoutUser"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="8dp"
-            android:layout_weight="1"
-            android:scaleType="center"
-            android:src="@drawable/ic_logout" />
-
-    </LinearLayout>
-
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
-
         app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@id/bnUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/nav_bottom_nav" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
