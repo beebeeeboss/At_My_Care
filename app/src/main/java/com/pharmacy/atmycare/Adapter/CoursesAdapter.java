@@ -37,7 +37,7 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.CoursesV
     public void onBindViewHolder(@NonNull CoursesAdapter.CoursesViewHolder holder, int position) {
         holder.ivCourse.setImageResource(coursesDataList.get(position).getImageResourceID());
         holder.tvCourseName.setText(coursesDataList.get(position).getCourseName());
-        holder.tvCost.setText(coursesDataList.get(position).getCost()+"");
+        holder.tvCost.setText(String.valueOf(coursesDataList.get(position).getCost()));
         holder.tvDescription.setText(coursesDataList.get(position).getDescription());
         holder.tvStar.setText(coursesDataList.get(position).getNoOfStars()+" Stars");
     }
@@ -60,5 +60,4 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.CoursesV
             tvStar = itemView.findViewById(R.id.tvStar);
         }
     }
-    {
-}}
+}
