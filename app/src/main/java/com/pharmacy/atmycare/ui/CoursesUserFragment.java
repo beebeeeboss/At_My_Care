@@ -43,11 +43,9 @@ public class CoursesUserFragment extends Fragment {
         mCoursesAdapter = new CoursesAdapter(getContext() ,coursesDataList );
         bindings.rv.setLayoutManager(new LinearLayoutManager(getContext() , LinearLayoutManager.HORIZONTAL , false));
         bindings.rv.setAdapter(mCoursesAdapter);
-
-
-        coursesDataList.add(new Courses_User(700056 , "StethoscopeCourse",3.5,678,"This is to learn for listening heartbeat."));
-        coursesDataList.add(new Courses_User(700121,"bookCourse",4.2,786,"tis course is to read books"));
-        coursesDataList.add(new Courses_User(700105,"eartCourse",4.4,7286,"tis course is to read earts"));
+        coursesDataList.add(new Courses_User(R.drawable.account , "StethoscopeCourse",3.5,678,"This is to learn for listening heartbeat."));
+        coursesDataList.add(new Courses_User(R.drawable.courses,"bookCourse",4.2,786,"tis course is to read books"));
+        coursesDataList.add(new Courses_User(R.drawable.cart,"heartCourse",4.4,7286,"tis course is to read earts"));
 
         mCoursesAdapter.notifyDataSetChanged();
 

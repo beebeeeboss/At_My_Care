@@ -21,7 +21,7 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.CoursesV
 
     private Context context;
     private List<Courses_User> coursesDataList;
-    public CoursesAdapter(Context context , List<Courses_User> coursesDataListDataList)
+    public CoursesAdapter(Context context , List<Courses_User> coursesDataList)
     {
         this.context = context;
         this.coursesDataList = coursesDataList;
@@ -37,7 +37,7 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.CoursesV
     public void onBindViewHolder(@NonNull CoursesAdapter.CoursesViewHolder holder, int position) {
         holder.ivCourse.setImageResource(coursesDataList.get(position).getImageResourceID());
         holder.tvCourseName.setText(coursesDataList.get(position).getCourseName());
-        holder.tvCost.setText(coursesDataList.get(position).getCost());
+        holder.tvCost.setText(coursesDataList.get(position).getCost()+"");
         holder.tvDescription.setText(coursesDataList.get(position).getDescription());
         holder.tvStar.setText(coursesDataList.get(position).getNoOfStars()+" Stars");
     }
