@@ -13,11 +13,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
 import com.pharmacy.atmycare.Adapter.UserContentAdapter;
 import com.pharmacy.atmycare.Adapter.UserHealthBlogsAdapter;
 import com.pharmacy.atmycare.Adapter.UserVideoAdapter;
 import com.pharmacy.atmycare.R;
 import com.pharmacy.atmycare.databinding.FragmentHomeUserBinding;
+
 
 import com.pharmacy.atmycare.model.HealthBlog_User;
 import com.pharmacy.atmycare.model.Video_User;
@@ -31,9 +33,11 @@ public class HomeUserFragment extends Fragment {
     private FragmentHomeUserBinding bindings;
     private UserContentAdapter mUserContentAdapter;
     private UserHealthBlogsAdapter mUserHealthBlogsAdapter;
+
     private UserVideoAdapter mUserVideoAdapter;
     private List<Integer> imageResourceList;
     private List<HealthBlog_User> healthDataList;
+
     private List<Video_User> videoDataList;
     private CountDownTimer forContent;
     private int count = 0;
@@ -55,12 +59,15 @@ public class HomeUserFragment extends Fragment {
         mUserContentAdapter = new UserContentAdapter(getContext() , imageResourceList );
         mUserHealthBlogsAdapter = new UserHealthBlogsAdapter(getContext() , healthDataList);
         mUserVideoAdapter = new UserVideoAdapter(getContext() , videoDataList );
+
         bindings.rvContentInUser.setLayoutManager(new LinearLayoutManager(getContext() , LinearLayoutManager.HORIZONTAL , false));
         bindings.rvHealthBlogs.setLayoutManager(new LinearLayoutManager(getContext() , LinearLayoutManager.HORIZONTAL , false));
+
         bindings.rvVideo.setLayoutManager(new LinearLayoutManager(getContext() , LinearLayoutManager.HORIZONTAL , false));
         bindings.rvContentInUser.setAdapter(mUserContentAdapter);
         bindings.rvHealthBlogs.setAdapter(mUserHealthBlogsAdapter);
         bindings.rvVideo.setAdapter(mUserVideoAdapter);
+
 
         imageResourceList.add(R.drawable.stethoscope);
         imageResourceList.add(R.drawable.book);
@@ -79,11 +86,15 @@ public class HomeUserFragment extends Fragment {
         videoDataList.add(new Video_User("https://www.youtube.com/embed/zSguDQRjZv0","Determinants of Helath",32,"Determinants of Helath"));
 
         mUserVideoAdapter.notifyDataSetChanged();
+
+
+
         forContent = new CountDownTimer(15000,5000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 bindings.rvContentInUser.scrollToPosition(count++);
                 bindings.rvHealthBlogs.scrollToPosition(count++);
+
             }
 
             @Override
@@ -91,6 +102,7 @@ public class HomeUserFragment extends Fragment {
                 count = 0;
                 bindings.rvContentInUser.scrollToPosition(0);
                 bindings.rvHealthBlogs.scrollToPosition(0);
+
                 forContent.start();
             }
         };
