@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.pharmacy.atmycare.ui.LoginFragment"
+        android:name="com.pharmacy.atmycare.ui.LoginFragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/resgisterUserFragment"
-        android:name="com.pharmacy.atmycare.ui.ResgisterUserFragment"
+        android:name="com.pharmacy.atmycare.ui.LoginFragments.ResgisterUserFragment"
         android:label="fragment_resgister_user"
         tools:layout="@layout/fragment_resgister_user" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/userDashboardFragment"
-        android:name="com.pharmacy.atmycare.ui.UserDashboardFragment"
+        android:name="com.pharmacy.atmycare.ui.UserLayoutFragments.UserDashboardFragment"
         android:label="UserDashboardFragment" >
         <action
             android:id="@+id/action_userDashboardFragment_to_loginFragment"

@@ -1,4 +1,4 @@
-package com.pharmacy.atmycare.ui;
+package com.pharmacy.atmycare.ui.LoginFragments;
 
 import android.os.Bundle;
 
@@ -14,7 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 import com.pharmacy.atmycare.R;
-import com.pharmacy.atmycare.databinding.FragmentLoginBinding;
+
 import com.pharmacy.atmycare.databinding.FragmentResgisterUserBinding;
 
 

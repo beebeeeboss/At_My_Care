@@ -6,27 +6,27 @@
     app:startDestination="@id/homeUserFragment">
     <fragment
         android:id="@+id/homeUserFragment"
-        android:name="com.pharmacy.atmycare.ui.HomeUserFragment"
+        android:name="com.pharmacy.atmycare.ui.UserLayoutFragments.HomeUserFragment"
         android:label="fragment_home_user"
         tools:layout="@layout/fragment_home_user" />
     <fragment
         android:id="@+id/coursesUserFragment"
-        android:name="com.pharmacy.atmycare.ui.CoursesUserFragment"
+        android:name="com.pharmacy.atmycare.ui.UserLayoutFragments.CoursesUserFragment"
         android:label="fragment_courses_user"
         tools:layout="@layout/fragment_courses_user" />
     <fragment
         android:id="@+id/buyMedicinesUserFragment"
-        android:name="com.pharmacy.atmycare.ui.BuyMedicinesUserFragment"
+        android:name="com.pharmacy.atmycare.ui.UserLayoutFragments.BuyMedicinesUserFragment"
         android:label="fragment_buy_medicines_user"
         tools:layout="@layout/fragment_buy_medicines_user" />
     <fragment
         android:id="@+id/notificationsUserFragment"
-        android:name="com.pharmacy.atmycare.ui.NotificationsUserFragment"
+        android:name="com.pharmacy.atmycare.ui.UserLayoutFragments.NotificationsUserFragment"
         android:label="fragment_notifications_user"
         tools:layout="@layout/fragment_notifications_user" />
     <fragment
         android:id="@+id/accountUserFragment"
-        android:name="com.pharmacy.atmycare.ui.AccountUserFragment"
+        android:name="com.pharmacy.atmycare.ui.UserLayoutFragments.AccountUserFragment"
         android:label="fragment_account_user"
         tools:layout="@layout/fragment_account_user" />
 </navigation>

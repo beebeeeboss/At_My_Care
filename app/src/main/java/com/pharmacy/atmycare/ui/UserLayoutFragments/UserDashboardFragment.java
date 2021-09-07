@@ -1,4 +1,4 @@
-package com.pharmacy.atmycare.ui;
+package com.pharmacy.atmycare.ui.UserLayoutFragments;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -62,29 +62,8 @@ public class UserDashboardFragment extends Fragment {
                     return true;
 
                 case R.id.bnAccount:
-                    if(1 == 1) //TODO Here Logic of User is Logged in or not (guest )
-                    {
                         //if user is logged in with account details
                         Navigation.findNavController(bindings.fragmentContainerView).navigate(R.id.accountUserFragment);
-                    }
-                    else
-                    {
-                      //guest user
-                        View promptView = LayoutInflater.from(getContext()).inflate(R.layout.account_user_dailog , null);
-                        AlertDialog dialog = new AlertDialog.Builder(getContext()).create();
-                        Button btnCancelLogin = promptView.findViewById(R.id.btnCancelAccountUser);
-                        Button btnLogin = promptView.findViewById(R.id.btnLoginAccountUser);
-                        btnCancelLogin.setOnClickListener(v->
-                                dialog.dismiss());
-                        btnLogin.setOnClickListener(v->
-                        {
-                            dialog.dismiss();
-                            Navigation.findNavController(getView()).navigate(UserDashboardFragmentDirections.actionUserDashboardFragmentToLoginFragment());
-                        });
-                        dialog.setView(promptView);
-                        dialog.setCancelable(true);
-                        dialog.show();
-                    }
                     return true;
 
                 default:

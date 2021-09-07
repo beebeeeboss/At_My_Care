@@ -1,4 +1,4 @@
-package com.pharmacy.atmycare.ui;
+package com.pharmacy.atmycare.ui.LoginFragments;
 
 import android.graphics.Color;
 import android.os.Bundle;

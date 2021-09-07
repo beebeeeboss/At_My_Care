@@ -1,4 +1,4 @@
-package com.pharmacy.atmycare.ui;
+package com.pharmacy.atmycare.ui.UserLayoutFragments;
 
 import android.os.Bundle;
 

@@ -53,103 +53,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivCILogin" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilPhoneNumber"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:textColorHint="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spLoginType">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPhoneNumber"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Please Enter Your Number Here"
-            android:inputType="number"
-            android:maxLength="10"
-            android:textColorHint="#FFFFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnSendOTP"
-        android:layout_width="175dp"
-        android:layout_height="44dp"
-
-        android:background="@drawable/custom_btn_otp"
-        android:text="Send OTP"
-        android:textColor="#FFFFFF"
-        android:textSize="19sp"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView3"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilPhoneNumber"
-        app:layout_constraintVertical_bias="0.154" />
-
-    <LinearLayout
-        android:id="@+id/llOtp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:orientation="vertical"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spLoginType">
-
-        <in.aabhasjindal.otptextview.OtpTextView
-            android:id="@+id/ovReceivedOtp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:textColor="@android:color/black"
-            app:bar_active_color="#00f"
-            app:bar_enabled="true"
-            app:bar_error_color="#f00"
-            app:bar_height="2dp"
-            app:bar_inactive_color="@android:color/transparent"
-            app:bar_success_color="#0f0"
-            app:height="40dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnSendOTP"
-            app:length="6"
-            app:otp_text_size="24dp"
-            app:width="40dp" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/tvResendOTP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="10dp"
-        android:text="Resend OTP"
-        android:textColor="#00f"
-        android:textSize="14sp"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/llOtp" />
-
-    <TextView
-        android:id="@+id/tvChangeNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="35dp"
-        android:text="Change Number"
-        android:textColor="#00f"
-        android:textSize="14sp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/llOtp" />
+        app:layout_constraintTop_toBottomOf="@id/spLoginType"
+        app:navGraph="@navigation/login_nav_graph" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
