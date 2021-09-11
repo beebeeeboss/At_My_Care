@@ -11,10 +11,20 @@
         tools:layout="@layout/fragment_user_login" >
         <action
             android:id="@+id/action_userLoginFragment_to_ATMxLoginFragment"
-            app:destination="@id/ATMxLoginFragment" />
+            app:destination="@id/ATMxLoginFragment"
+            app:popUpTo="@id/login_nav_grap" />
         <action
             android:id="@+id/action_userLoginFragment_to_adminLoginFragment"
-            app:destination="@id/adminLoginFragment" />
+            app:destination="@id/adminLoginFragment"
+            app:popUpTo="@id/login_nav_grap" />
+        <action
+            android:id="@+id/action_userLoginFragment_self"
+            app:destination="@id/userLoginFragment"
+            app:popUpTo="@id/login_nav_grap" />
+        <action
+            android:id="@+id/action_userLoginFragment_to_nav_graph"
+            app:destination="@id/nav_graph"
+            app:popUpTo="@id/nav_graph" />
     </fragment>
     <fragment
         android:id="@+id/ATMxLoginFragment"
@@ -40,4 +50,5 @@
             android:id="@+id/action_adminLoginFragment_to_userLoginFragment"
             app:destination="@id/userLoginFragment" />
     </fragment>
+    <include app:graph="@navigation/nav_graph" />
 </navigation>
