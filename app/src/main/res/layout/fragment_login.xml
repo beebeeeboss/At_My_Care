@@ -42,14 +42,15 @@
     <Spinner
         android:id="@+id/spLoginType"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_marginTop="25dp"
-        android:textAlignment="center"
         android:background="@android:color/transparent"
         android:popupBackground="@android:color/white"
+        android:scrollbarSize="30dp"
         android:spinnerMode="dialog"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="center"
         app:flow_horizontalBias="50"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivCILogin" />
 
