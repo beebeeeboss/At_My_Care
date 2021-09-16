@@ -58,29 +58,32 @@
         android:id="@+id/AtmXForgotPassward"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:text="Forgot Passward?"
         android:textColor="#3F51B5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.687"
+        app:layout_constraintHorizontal_bias="0.677"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilPassward" />
+        app:layout_constraintTop_toBottomOf="@+id/AtmXPassward" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnSendOTP"
+        android:id="@+id/btnAtmxLogin"
         android:layout_width="175dp"
         android:layout_height="44dp"
 
+        android:layout_marginBottom="200dp"
         android:background="@drawable/custom_btn_otp"
         android:text="LogIn"
         android:textColor="#FFFFFF"
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.402"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilPassward"
-        app:layout_constraintVertical_bias="0.221"
+        app:layout_constraintTop_toBottomOf="@+id/AtmXPassward"
+        app:layout_constraintVertical_bias="0.401"
         tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
