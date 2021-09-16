@@ -41,10 +41,13 @@
 
     <Spinner
         android:id="@+id/spLoginType"
-        android:layout_width="300dp"
-        android:layout_height="30dp"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
         android:background="@android:color/transparent"
+        android:dropDownWidth="match_parent"
         android:popupBackground="@android:color/white"
         android:scrollbarSize="30dp"
         android:spinnerMode="dialog"

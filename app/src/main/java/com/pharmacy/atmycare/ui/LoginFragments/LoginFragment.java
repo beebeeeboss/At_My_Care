@@ -34,6 +34,7 @@ public class LoginFragment extends Fragment {
 
     private FragmentLoginBinding binding;
 
+    public static View loginView;
     // use this binding for find view by id purpose
     // like textview as binding.idnamedefinedinresourcefile
     @Override
@@ -47,7 +48,7 @@ public class LoginFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+loginView = getView();
         if (UserLoginFragment.goTo != null){
             if (UserLoginFragment.goTo.equals("reg")) {
                 Navigation.findNavController(getActivity().findViewById(R.id.fragmentContainerView2)).navigate(LoginFragmentDirections.actionLoginFragmentToResgisterUserFragment());
@@ -55,7 +56,7 @@ public class LoginFragment extends Fragment {
                 Navigation.findNavController(getActivity().findViewById(R.id.fragmentContainerView2)).navigate(LoginFragmentDirections.actionLoginFragmentToUserDashboardFragment());
             }
         } else {
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.user_type, android.R.layout.simple_spinner_item);
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.user_type, R.layout.login_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             binding.spLoginType.setAdapter(adapter);
             binding.fragmentContainerView3.setVisibility(View.GONE);

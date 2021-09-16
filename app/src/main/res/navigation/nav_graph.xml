@@ -17,6 +17,12 @@
             android:id="@+id/action_loginFragment_to_userDashboardFragment"
             app:destination="@id/userDashboardFragment"
             app:popUpTo="@id/nav_graph" />
+        <action
+            android:id="@+id/action_loginFragment_to_ATMxDashboardFragment"
+            app:destination="@id/ATMxDashboardFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/nav_graph" />
     </fragment>
     <fragment
         android:id="@+id/resgisterUserFragment"
@@ -33,6 +39,18 @@
         android:label="UserDashboardFragment" >
         <action
             android:id="@+id/action_userDashboardFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/nav_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/ATMxDashboardFragment"
+        android:name="com.pharmacy.atmycare.ui.ATMxLayoutFragments.ATMxDashboardFragment"
+        android:label="fragment_a_t_mx_dashboard"
+        tools:layout="@layout/fragment_a_t_mx_dashboard" >
+        <action
+            android:id="@+id/action_ATMxDashboardFragment_to_loginFragment"
             app:destination="@id/loginFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
