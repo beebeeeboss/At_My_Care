@@ -11,16 +11,14 @@
         tools:layout="@layout/fragment_user_login" >
         <action
             android:id="@+id/action_userLoginFragment_to_ATMxLoginFragment"
-            app:destination="@id/ATMxLoginFragment"
-            app:popUpTo="@id/login_nav_grap" />
+            app:destination="@id/ATMxLoginFragment" />
         <action
             android:id="@+id/action_userLoginFragment_to_adminLoginFragment"
-            app:destination="@id/adminLoginFragment"
-            app:popUpTo="@id/login_nav_grap" />
+            app:destination="@id/adminLoginFragment" />
         <action
             android:id="@+id/action_userLoginFragment_self"
             app:destination="@id/userLoginFragment"
-            app:popUpTo="@id/login_nav_grap" />
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_userLoginFragment_to_nav_graph"
             app:destination="@id/nav_graph"
@@ -36,7 +34,8 @@
             app:destination="@id/adminLoginFragment" />
         <action
             android:id="@+id/action_ATMxLoginFragment_to_userLoginFragment"
-            app:destination="@id/userLoginFragment" />
+            app:destination="@id/userLoginFragment"
+            app:popUpTo="@id/login_nav_grap" />
     </fragment>
     <fragment
         android:id="@+id/adminLoginFragment"
@@ -48,7 +47,8 @@
             app:destination="@id/ATMxLoginFragment" />
         <action
             android:id="@+id/action_adminLoginFragment_to_userLoginFragment"
-            app:destination="@id/userLoginFragment" />
+            app:destination="@id/userLoginFragment"
+            app:popUpTo="@id/login_nav_grap" />
     </fragment>
     <include app:graph="@navigation/nav_graph" />
 </navigation>

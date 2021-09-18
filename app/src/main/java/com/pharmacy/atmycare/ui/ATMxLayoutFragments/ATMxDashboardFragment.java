@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +31,24 @@ public class ATMxDashboardFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        binding.bnATMX.setOnNavigationItemSelectedListener(item ->
+        {
+            switch (item.getItemId()) {
+                case R.id.bnATMXHome:
+                    Navigation.findNavController(binding.fragmentContainerView4).navigate(R.id.ATMXHomeFragment);
+                    return true;
+                case R.id.bnATMXServices:
+                    Navigation.findNavController(binding.fragmentContainerView4).navigate(R.id.ATMXServicesFragment);
 
+                    return true;
+
+                case R.id.bnATMXAccount:
+                    Navigation.findNavController(binding.fragmentContainerView4).navigate(R.id.ATMXAccountFragment2);
+
+                    return true;
+                default:
+                    return false;
+            }
+        });
     }
 }

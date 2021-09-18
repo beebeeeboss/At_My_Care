@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bnATMXHome"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/bnATMXServices"
+        android:enabled="true"
+        android:icon="@drawable/ic_medical_services"
+        android:title="Services"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/bnATMXAccount"
+        android:enabled="true"
+        android:icon="@drawable/ic_account"
+        android:title="Account"
+        app:showAsAction="withText" />
+</menu>

@@ -3,9 +3,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string-array name="user_type">
-        <item>Select Your Role</item>
-        <item>Admin</item>
-        <item>ATMx Login</item>
         <item>User</item>
+        <item>ATMx Login</item>
+        <item>Admin</item>
     </string-array>
 </resources>

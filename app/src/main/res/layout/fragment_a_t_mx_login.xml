@@ -53,11 +53,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/AtmXForgotPassward"
+        android:id="@+id/atmXForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Forgot Passward?"
+        android:layout_marginTop="8dp"
+        android:text="Forgot Password?"
         android:textColor="#3F51B5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.677"
@@ -69,18 +69,16 @@
         android:layout_width="wrap_content"
         android:layout_height="44dp"
 
-        android:layout_marginBottom="200dp"
+        android:layout_marginTop="45dp"
         android:background="@drawable/custom_btn_otp"
         android:text="LogIn"
         android:textColor="#FFFFFF"
+
         android:textSize="19sp"
-        app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AtmXPassward"
-        app:layout_constraintVertical_bias="0.401"
+        app:layout_constraintTop_toBottomOf="@id/atmXForgotPassword"
         tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,6 +25,7 @@ import com.mukesh.OnOtpCompletionListener;
 import com.mukesh.OtpView;
 import com.pharmacy.atmycare.R;
 import com.pharmacy.atmycare.databinding.FragmentLoginBinding;
+import com.pharmacy.atmycare.ui.ATMxLayoutFragments.ATMxDashboardFragment;
 
 import in.aabhasjindal.otptextview.OTPListener;
 import in.aabhasjindal.otptextview.OtpTextView;
@@ -33,7 +34,6 @@ import in.aabhasjindal.otptextview.OtpTextView;
 public class LoginFragment extends Fragment {
 
     private FragmentLoginBinding binding;
-
     public static View loginView;
     // use this binding for find view by id purpose
     // like textview as binding.idnamedefinedinresourcefile
@@ -48,7 +48,7 @@ public class LoginFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-loginView = getView();
+        loginView = getView();
         if (UserLoginFragment.goTo != null){
             if (UserLoginFragment.goTo.equals("reg")) {
                 Navigation.findNavController(getActivity().findViewById(R.id.fragmentContainerView2)).navigate(LoginFragmentDirections.actionLoginFragmentToResgisterUserFragment());
@@ -57,27 +57,21 @@ loginView = getView();
             }
         } else {
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.user_type, R.layout.login_spinner_item);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            adapter.setDropDownViewResource(R.layout.spinner_dialog_item);
             binding.spLoginType.setAdapter(adapter);
-            binding.fragmentContainerView3.setVisibility(View.GONE);
             binding.spLoginType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    Navigation.findNavController(binding.fragmentContainerView3).navigateUp();
                     switch (i) {
-                        case 1:
-                            binding.fragmentContainerView3.setVisibility(View.VISIBLE);
-                            Navigation.findNavController(binding.fragmentContainerView3).navigateUp();
-                            Navigation.findNavController(binding.fragmentContainerView3).navigate(UserLoginFragmentDirections.actionUserLoginFragmentToAdminLoginFragment());
-                            break;
                         case 2:
-                            binding.fragmentContainerView3.setVisibility(View.VISIBLE);
-                            Navigation.findNavController(binding.fragmentContainerView3).navigateUp();
-                            Navigation.findNavController(binding.fragmentContainerView3).navigate(UserLoginFragmentDirections.actionUserLoginFragmentToATMxLoginFragment());
+                            Navigation.findNavController(binding.fragmentContainerView3).navigate(R.id.action_userLoginFragment_to_adminLoginFragment);
                             break;
-                        case 3:
-                            binding.fragmentContainerView3.setVisibility(View.VISIBLE);
+                        case 1:
+                            Navigation.findNavController(binding.fragmentContainerView3).navigate(R.id.action_userLoginFragment_to_ATMxLoginFragment);
+                            break;
+                        case 0:
                             Navigation.findNavController(binding.fragmentContainerView3).navigateUp();
-                            Navigation.findNavController(binding.fragmentContainerView3).navigate(UserLoginFragmentDirections.actionUserLoginFragmentSelf());
                             break;
                     }
                 }

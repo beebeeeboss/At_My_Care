@@ -57,21 +57,19 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnAdminLogin"
         android:layout_width="175dp"
-        android:layout_height="44dp"
+        android:layout_height="wrap_content"
 
-        android:layout_marginBottom="200dp"
+        android:layout_marginTop="56dp"
         android:background="@drawable/custom_btn_otp"
         android:text="LogIn"
         android:textColor="#FFFFFF"
+
         android:textSize="19sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+
 
         app:layout_constraintEnd_toEndOf="parent"
-
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AdminPassward"
-        app:layout_constraintVertical_bias="0.342"
         tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
