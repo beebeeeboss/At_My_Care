@@ -4,15 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ATMxLayoutFragments.ATMXHomeFragment" >
+    tools:context=".ui.ATMxLayoutFragments.HomeFrags.ATMXHomeFragment">
 
-    <TextView
-        android:id="@+id/textView31"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView5"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/atmx_home_nav" />
 </androidx.constraintlayout.widget.ConstraintLayout>

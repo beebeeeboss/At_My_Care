@@ -18,7 +18,7 @@ import com.pharmacy.atmycare.databinding.FragmentATMxLoginBinding;
 
 public class ATMxDashboardFragment extends Fragment {
 
-    private FragmentATMxDashboardBinding binding;
+    public static FragmentATMxDashboardBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

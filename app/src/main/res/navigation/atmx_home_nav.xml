@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/atmx_home_nav"
+    app:startDestination="@id/ATMX_HOME_MAIN_Fragment">
+
+    <fragment
+        android:id="@+id/ATMX_HOME_MAIN_Fragment"
+        android:name="com.pharmacy.atmycare.ui.ATMxLayoutFragments.HomeFrags.ATMX_HOME_MAIN_Fragment"
+        android:label="ATMX_HOME_MAIN_Fragment" >
+        <action
+            android:id="@+id/action_ATMX_HOME_MAIN_Fragment_to_PATIENT_INITIAL_ASSESSMENT_Fragment"
+            app:destination="@id/PATIENT_INITIAL_ASSESSMENT_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PATIENT_INITIAL_ASSESSMENT_Fragment"
+        android:name="com.pharmacy.atmycare.ui.ATMxLayoutFragments.HomeFrags.PATIENT_INITIAL_ASSESSMENT_Fragment"
+        android:label="fragment_p_a_t_i_e_n_t__i_n_i_t_i_a_l__a_s_s_e_s_s_m_e_n_t_"
+        tools:layout="@layout/fragment_p_a_t_i_e_n_t__i_n_i_t_i_a_l__a_s_s_e_s_s_m_e_n_t_" />
+</navigation>

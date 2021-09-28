@@ -6,7 +6,7 @@
     app:startDestination="@id/ATMXHomeFragment">
     <fragment
         android:id="@+id/ATMXHomeFragment"
-        android:name="com.pharmacy.atmycare.ui.ATMxLayoutFragments.ATMXHomeFragment"
+        android:name="com.pharmacy.atmycare.ui.ATMxLayoutFragments.HomeFrags.ATMXHomeFragment"
         android:label="fragment_a_t_m_x_home"
         tools:layout="@layout/fragment_a_t_m_x_home" />
     <fragment
