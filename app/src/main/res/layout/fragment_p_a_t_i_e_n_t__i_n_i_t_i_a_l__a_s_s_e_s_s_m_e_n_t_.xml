@@ -123,11 +123,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintBottom_toTopOf="@id/tvNext"
         tools:ignore="SpeakableTextPresentCheck">
 
         <LinearLayout
@@ -156,8 +155,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
-                        android:inputType="textPersonName"
                         android:hint="Enter Patient Name"
+                        android:inputType="textPersonName"
                         android:textColorHint="@color/black" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -267,6 +266,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/llhCUM"
                 android:layout_width="match_parent"
@@ -322,6 +322,7 @@
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
                     android:background="@color/black" />
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilMLC"
                     android:layout_width="0dp"
@@ -399,6 +400,7 @@
 
 
             </LinearLayout>
+
             <View
                 android:id="@+id/divider19"
                 android:layout_width="match_parent"
@@ -492,9 +494,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:inputType="text"
-                    android:hint="CHIEF COMPLAINTS/REASON FOR COUNSELING:         (Source of history- self/other……………………….)" />
+                    android:hint="CHIEF COMPLAINTS/REASON FOR COUNSELING:         (Source of history- self/other……………………….)"
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <View
                 android:id="@+id/divider22"
                 android:layout_width="match_parent"
@@ -576,6 +579,188 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/tvPersonalHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato"
+                android:paddingStart="7dp"
+                android:text="PERSONAL HISTORY:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/llhAppetite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAppetite"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Appetite:"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rgAppetite"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbAppetiteDecrease"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Decrease" />
+
+                    <RadioButton
+                        android:id="@+id/rbAppetiteNormal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Normal" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilWaterIntake"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:padding="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etWaterIntake"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Water Intake in Litres"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/llhAlcohol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbAlcohol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="Alcohol" />
+                <!-- TODO Enable the smoking other enteries by Java Code -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilAlcoholStartDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAlcoholStartDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Start Date"
+                        android:inputType="date"
+                        android:textColorHint="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilAlcoholFrequency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAlcoholFrequency"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Frequency"
+                        android:inputType="number"
+                        android:textColorHint="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llhSmoking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbSmoking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="Smoking" />
+                <!-- TODO Enable the smoking other enteries by Java Code -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilSmokingStartDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSmokingStartDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Start Date"
+                        android:inputType="date"
+                        android:textColorHint="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilSmokingFrequency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSmokingFrequency"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Frequency"
+                        android:inputType="number"
+                        android:textColorHint="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
@@ -585,20 +770,31 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="21dp"
         android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout4" />
+
     <View
         android:id="@+id/divider10"
         android:layout_width="2dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="21dp"
         android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout4" />
+
+    <TextView
+        android:id="@+id/tvNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divider10"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

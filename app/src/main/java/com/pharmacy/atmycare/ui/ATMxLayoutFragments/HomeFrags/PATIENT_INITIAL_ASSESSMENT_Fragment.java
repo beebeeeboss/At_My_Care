@@ -31,5 +31,7 @@ public class PATIENT_INITIAL_ASSESSMENT_Fragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         bindings.ivBackPatientInitialAssessment.setOnClickListener(v->
                 Navigation.findNavController(getView()).navigateUp());
+//        bindings.tvNext.setOnClickListener(v->
+//                );
     }
 }
