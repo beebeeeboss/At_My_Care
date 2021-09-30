@@ -23,16 +23,17 @@
             android:id="@+id/textView35"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/textView36"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="SERVICES"
+            android:textSize="24dp" />
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/admin" />
 
     </LinearLayout>
 
