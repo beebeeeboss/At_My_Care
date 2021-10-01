@@ -17,5 +17,14 @@
         android:id="@+id/PATIENT_INITIAL_ASSESSMENT_Fragment"
         android:name="com.pharmacy.atmycare.ui.ATMxLayoutFragments.HomeFrags.PATIENT_INITIAL_ASSESSMENT_Fragment"
         android:label="fragment_p_a_t_i_e_n_t__i_n_i_t_i_a_l__a_s_s_e_s_s_m_e_n_t_"
-        tools:layout="@layout/fragment_p_a_t_i_e_n_t__i_n_i_t_i_a_l__a_s_s_e_s_s_m_e_n_t_" />
+        tools:layout="@layout/fragment_p_a_t_i_e_n_t__i_n_i_t_i_a_l__a_s_s_e_s_s_m_e_n_t_" >
+        <action
+            android:id="@+id/action_PATIENT_INITIAL_ASSESSMENT_Fragment_to_theropotaticFragment"
+            app:destination="@id/theropotaticFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/theropotaticFragment"
+        android:name="com.pharmacy.atmycare.ui.ATMxLayoutFragments.HomeFrags.TheropotaticFragment"
+        android:label="fragment_theropotatic"
+        tools:layout="@layout/fragment_theropotatic" />
 </navigation>
