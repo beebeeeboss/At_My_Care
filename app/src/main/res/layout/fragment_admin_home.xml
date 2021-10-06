@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ATMxLayoutFragments.HomeFrags.ATMXHomeFragment">
+    tools:context=".ui.AdminLayoutFragments.HomeFragments.AdminHomeFragment">
 
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView5"
+        android:id="@+id/fragmentContainerView7"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -17,5 +17,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/atmx_home_nav" />
+        app:navGraph="@navigation/admin_home_nav" />
 </androidx.constraintlayout.widget.ConstraintLayout>

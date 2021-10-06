@@ -1,4 +1,4 @@
-package com.pharmacy.atmycare.ui.ATMxLayoutFragments;
+package com.pharmacy.atmycare.ui.AdminLayoutFragments.HomeFragments;
 
 import android.os.Bundle;
 
@@ -11,21 +11,22 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.pharmacy.atmycare.R;
-import com.pharmacy.atmycare.databinding.FragmentATMXHomeBinding;
+import com.pharmacy.atmycare.databinding.FragmentAdminHomeBinding;
 
-public class ATMXHomeFragment extends Fragment {
+public class AdminHomeFragment extends Fragment {
 
-    private FragmentATMXHomeBinding binding;
+    private FragmentAdminHomeBinding bindings;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = FragmentATMXHomeBinding.inflate(inflater , container , false);
-        return binding.getRoot();
+        bindings = FragmentAdminHomeBinding.inflate(inflater , container , false);
+        return bindings.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
     }
 }

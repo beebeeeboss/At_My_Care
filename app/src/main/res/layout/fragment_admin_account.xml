@@ -4,11 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/custom_white_circle"
-    tools:context=".ui.UserLayoutFragments.AccountUserFragment">
+    android:background="@drawable/custom_white_circle">
 
     <ScrollView
-        android:id="@+id/scrollView3"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,7 +89,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
                             android:fontFamily="serif"
-                            android:text="Temp Name of User (Relation)"
+                            android:text="Temp Name of Admin"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
 
@@ -120,30 +118,6 @@
                     app:srcCompat="@drawable/ic_photo_camera" />
 
             </androidx.cardview.widget.CardView>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnCompleteUserProfile"
-                    android:layout_width="0dp"
-                    android:layout_height="42dp"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/custom_button_square_filled"
-                    android:elevation="8dp"
-                    android:text="Complete Profile"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    tools:ignore="TouchTargetSizeCheck" />
-            </LinearLayout>
 
             <TextView
                 android:id="@+id/textView22"
@@ -203,7 +177,7 @@
                                 android:layout_margin="8dp"
                                 android:layout_weight="5"
                                 android:fontFamily="@font/timmana"
-                                android:text="Request Permissions"
+                                android:text="Grant Permissions"
                                 android:textColor="@color/black"
                                 android:textSize="16sp" />
                         </LinearLayout>

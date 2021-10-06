@@ -1,4 +1,4 @@
-package com.pharmacy.atmycare.ui.ATMxLayoutFragments;
+package com.pharmacy.atmycare.ui.AdminLayoutFragments;
 
 import android.os.Bundle;
 
@@ -12,38 +12,35 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.pharmacy.atmycare.R;
-import com.pharmacy.atmycare.databinding.FragmentATMxDashboardBinding;
-import com.pharmacy.atmycare.databinding.FragmentATMxLoginBinding;
+import com.pharmacy.atmycare.databinding.FragmentAdminDashboardBinding;
 
 
-public class ATMxDashboardFragment extends Fragment {
-
-    public static FragmentATMxDashboardBinding binding;
-
+public class AdminDashboardFragment extends Fragment {
+    private FragmentAdminDashboardBinding bindings;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = FragmentATMxDashboardBinding.inflate(inflater , container ,false);
-        return binding.getRoot();
+        bindings = FragmentAdminDashboardBinding.inflate(inflater ,container , false);
+        return bindings.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        binding.bnATMX.setOnNavigationItemSelectedListener(item ->
+        bindings.bnAdmin.setOnNavigationItemSelectedListener(item ->
         {
             switch (item.getItemId()) {
-                case R.id.bnATMXHome:
-                    Navigation.findNavController(binding.fragmentContainerView4).navigate(R.id.ATMXHomeFragment);
+                case R.id.bnAdminHome:
+                    Navigation.findNavController(bindings.fragmentContainerView6).navigate(R.id.adminHomeFragment);
                     return true;
                 case R.id.bnATMXServices:
-                    Navigation.findNavController(binding.fragmentContainerView4).navigate(R.id.ATMXServicesFragment);
+                    Navigation.findNavController(bindings.fragmentContainerView6).navigate(R.id.adminServicesFragment);
 
                     return true;
 
                 case R.id.bnATMXAccount:
-                    Navigation.findNavController(binding.fragmentContainerView4).navigate(R.id.ATMXAccountFragment2);
+                    Navigation.findNavController(bindings.fragmentContainerView6).navigate(R.id.adminAccountFragment);
 
                     return true;
                 default:
