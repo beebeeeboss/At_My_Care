@@ -8,7 +8,7 @@
     tools:context=".ui.ATMxLayoutFragments.HomeFrags.TheropotaticFragment">
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/linearLayoutTheropatic"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -28,13 +28,13 @@
             android:src="@drawable/ic_back" />
 
         <TextView
-            android:id="@+id/textView36"
+            android:id="@+id/textViewTHERAPEUTICINTERVENTIONFORM"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="9"
             android:fontFamily="@font/timmana"
             android:paddingTop="5dp"
-            android:text="PATIENT INITIAL ASSESSMENT AND MEDICATION RECONCILIATION FORM"
+            android:text="THERAPEUTIC INTERVENTION FORM"
             android:textAlignment="center"
             android:textColor="@android:color/background_dark"
             android:textSize="20sp"
@@ -42,7 +42,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout4"
+        android:id="@+id/linearLayouttheropatic1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -52,7 +52,7 @@
         android:weightSum="6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTheropatic">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilRegNo"
@@ -127,7 +127,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayouttheropatic1"
         tools:ignore="SpeakableTextPresentCheck">
 
         <LinearLayout
@@ -502,7 +502,7 @@
                 android:background="@color/black" />
 
             <LinearLayout
-                android:id="@+id/llhICDAllergy"
+                android:id="@+id/llDiagnosisWithICD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -511,7 +511,7 @@
 
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tilICDCode"
+                    android:id="@+id/tilICDCode1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="5dp"
@@ -519,7 +519,7 @@
                     android:padding="5dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etICDCode"
+                        android:id="@+id/etICDCode1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
@@ -534,50 +534,1558 @@
                     android:layout_height="match_parent"
                     android:background="@color/black" />
 
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tvAllergy"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilICDCode2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Allergy:"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="4"
+                    android:padding="5dp">
 
-                <RadioGroup
-                    android:id="@+id/rgAllergy"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/rbDrugs"
-                        android:layout_width="wrap_content"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etICDCode2"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Drugs" />
+                        android:background="@android:color/transparent"
+                        android:hint="Source of history-Self/Other:"
+                        android:inputType="number"
+                        android:textColorHint="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                    <RadioButton
-                        android:id="@+id/rbFood"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Food" />
-                </RadioGroup>
+
 
             </LinearLayout>
-
             <View
-                android:id="@+id/divider24"
+                android:id="@+id/dividerP0"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+            <TextView
+                android:id="@+id/tvTypeOfDrugRelatedProblems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato"
+                android:paddingStart="7dp"
+                android:text="Type Of Drug Related Problems:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/dividerP1"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/UNC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/UNC1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvUNC"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="1)UNNECESSARY INDICATION:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgUNC"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYes1"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNo1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilUNC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etUNC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/dividerP2"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/NCI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/NCI1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvNCI"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="2)Non Confirmatory Indication:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgNCI"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesNCI"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoNCI"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilNCI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNCI"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/dividerP3"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/MI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/MI1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMI"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="3)Missing Indication:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgMI"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesMI"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoMI"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilMI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMI"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+            <View
+                android:id="@+id/dividerp4"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/Dosage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/Dosage1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDosage"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="4)Dosage(dose,frequency,indication):"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgDosage"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesDosage"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoDosage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDosage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDosage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+
+            <View
+                android:id="@+id/dividerP5"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/AR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/AR1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAR"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="5)Adminstration Route:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgAR"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesAR"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoAR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilAR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAR"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+
+
+            <View
+                android:id="@+id/dividerP6"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/DSE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/DSE1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDSE"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="6)Drug Side Effect:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgDSE"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesDSE"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoDSE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDSE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDSE"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+
+
+            <View
+                android:id="@+id/dividerP7"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/DI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/DI1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDI"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="7)Drug Interaction:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgDI"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesDI"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoDI"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDI"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+
+
+            <View
+                android:id="@+id/dividerP8"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/FI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/FI1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFI"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="8)Food Interaction:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgFI"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesFI"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoFI"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilFI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etFI"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+
+
+
+            <View
+                android:id="@+id/dividerP9"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/DM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/DM1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDM"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="9)Drug Monitoring:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgDM"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesDM"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoDM"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+
+
+
+            <View
+                android:id="@+id/dividerP10"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/DCD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/DCD1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDCD"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="10)Drug/Class Duplication:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgDCD"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesDCD"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoDCD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDCD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDCD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+
+
+
+            <View
+                android:id="@+id/dividerP11"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/PR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/PR1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPR"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="11)Pharmacoeconomic Req:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgPR"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesPR"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoPR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPR"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/dividerPU0"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <TextView
+                android:id="@+id/tvPHARMACISTINTERVENTION"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato"
+                android:paddingStart="7dp"
+                android:text="PHARMACIST INTERVENTION:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/dividerPU1"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/DD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/DD1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDD"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="1)Drug Discontinuation:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgDD"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesDD"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoDD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/dividerPU2"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/DS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/DS1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDS"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="2)Drug Switch:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgDS"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesDS"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoDS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/dividerPU3"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/DA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/DA1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDA"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="3)Drug Addition:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgDA"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesDA"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoDA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+            <View
+                android:id="@+id/dividerPU4"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/DIncreased"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/DIncreased1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDIncreased"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="4)Dose Increased:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgDIncreased"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesDIncreased"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoDIncreased"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDIncreased"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDIncreased"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+
+            <View
+                android:id="@+id/dividerPU5"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/DDecreased"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/DDecreased1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDDecreased"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="5)Dose decreased:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgDDecreased"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesDDecreased"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoDDecreased"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDDecreased"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDDecreased"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+
+
+            <View
+                android:id="@+id/dividerPU6"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/AMO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/AMO1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAMO"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="6)Adminstration mode optimized:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgAMO"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesAMO"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoAMO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilAMO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAMO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+
+
+            <View
+                android:id="@+id/dividerPU7"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/DMO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/DMO1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDMO"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="7)Drug monitoring optimized:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgDMO"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesDMO"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoDMO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDMO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDMO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+
+
+            <View
+                android:id="@+id/dividerPU8"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/CSF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/CSF1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCSF"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="8)Change in dosage form:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <RadioGroup
+                        android:id="@+id/rgCSF"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesCSF"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoCSF"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCSF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCSF"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+
+
+
+            <View
+                android:id="@+id/dividerPU9"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/Contraindications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+
+                <LinearLayout
+                    android:id="@+id/Contraindications1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvContraindications"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="9)Contradictations:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/rgContraindications"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbYesContraindications"
+                            android:layout_width="58dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Y" />
+
+                        <RadioButton
+                            android:id="@+id/rbNoContraindications"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="N" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilContraindications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etContraindications1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilRecommendedRegimen"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:padding="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etRecommendedRegimen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="Recommended Regimen"
+                    android:inputType="text"
+                    android:textColorHint="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilReasonforRecommendation"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:padding="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etReasonforRecommendation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="Reason for Recommendation"
+                    android:inputType="text"
+                    android:textColorHint="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
         </LinearLayout>
+
     </ScrollView>
+
 
     <View
         android:id="@+id/divider9"
@@ -589,7 +2097,7 @@
         android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout4" />
+        app:layout_constraintTop_toBottomOf="@id/linearLayouttheropatic1" />
     <View
         android:id="@+id/divider10"
         android:layout_width="2dp"
@@ -600,5 +2108,5 @@
         android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout4" />
+        app:layout_constraintTop_toBottomOf="@id/linearLayouttheropatic1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
