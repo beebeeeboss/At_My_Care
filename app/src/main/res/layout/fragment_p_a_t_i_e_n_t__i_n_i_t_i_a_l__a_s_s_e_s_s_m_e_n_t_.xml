@@ -156,6 +156,16 @@
                         android:hint="Enter Patient Name"
                         android:inputType="textPersonName"
                         android:textColorHint="@color/black" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter Address"
+                        android:inputType="textPostalAddress"
+                        android:minHeight="30dp"
+                        android:textColorHint="@color/black" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <View
@@ -220,15 +230,6 @@
                     android:layout_weight="4"
                     android:padding="5dp">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etAddress"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:hint="Enter Address"
-                        android:inputType="textPostalAddress"
-                        android:minHeight="30dp"
-                        android:textColorHint="@color/black" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <View

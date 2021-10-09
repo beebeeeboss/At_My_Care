@@ -492,8 +492,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:inputType="text"
-                    android:hint="CHIEF COMPLAINTS/REASON FOR COUNSELING:         (Source of history- self/other……………………….)" />
+                    android:hint="CHIEF COMPLAINTS/REASON FOR COUNSELING:         (Source of history- self/other……………………….)"
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
             <View
                 android:id="@+id/divider22"
