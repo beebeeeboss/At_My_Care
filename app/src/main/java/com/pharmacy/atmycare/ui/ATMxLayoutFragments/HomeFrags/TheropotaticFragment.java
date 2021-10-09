@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.renderscript.ScriptGroup;
 import android.view.LayoutInflater;
@@ -29,5 +30,7 @@ public class TheropotaticFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        binding.tvNext2nd.setOnClickListener(v->
+                Navigation.findNavController(v).navigate(TheropotaticFragmentDirections.actionTheropotaticFragmentToPatientCounselingFragment()));
     }
 }

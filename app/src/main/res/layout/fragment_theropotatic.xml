@@ -118,13 +118,13 @@
 
     <ScrollView
         android:id="@+id/scrollView4"
-        android:layout_width="0dp"
+        android:layout_width="389dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvNext2nd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayouttheropatic1"
@@ -156,8 +156,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
-                        android:inputType="textPersonName"
                         android:hint="Enter Patient Name"
+                        android:inputType="textPersonName"
                         android:textColorHint="@color/black" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -267,6 +267,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/llhCUM"
                 android:layout_width="match_parent"
@@ -322,6 +323,7 @@
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
                     android:background="@color/black" />
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilMLC"
                     android:layout_width="0dp"
@@ -399,6 +401,7 @@
 
 
             </LinearLayout>
+
             <View
                 android:id="@+id/divider19"
                 android:layout_width="match_parent"
@@ -492,9 +495,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:inputType="text"
-                    android:hint="CHIEF COMPLAINTS/REASON FOR COUNSELING:         (Source of history- self/other……………………….)" />
+                    android:hint="CHIEF COMPLAINTS/REASON FOR COUNSELING:         (Source of history- self/other……………………….)"
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <View
                 android:id="@+id/divider22"
                 android:layout_width="match_parent"
@@ -553,13 +557,14 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-
             </LinearLayout>
+
             <View
                 android:id="@+id/dividerP0"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <TextView
                 android:id="@+id/tvTypeOfDrugRelatedProblems"
                 android:layout_width="match_parent"
@@ -575,6 +580,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/UNC"
                 android:layout_width="match_parent"
@@ -582,6 +588,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/UNC1"
                     android:layout_width="match_parent"
@@ -600,6 +607,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgUNC"
                         android:layout_width="0dp"
@@ -623,11 +631,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilUNC"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etUNC"
@@ -645,6 +653,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/NCI"
                 android:layout_width="match_parent"
@@ -652,6 +661,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/NCI1"
                     android:layout_width="match_parent"
@@ -670,6 +680,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgNCI"
                         android:layout_width="0dp"
@@ -693,11 +704,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilNCI"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etNCI"
@@ -715,6 +726,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/MI"
                 android:layout_width="match_parent"
@@ -722,6 +734,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/MI1"
                     android:layout_width="match_parent"
@@ -740,6 +753,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgMI"
                         android:layout_width="0dp"
@@ -763,11 +777,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilMI"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etMI"
@@ -780,12 +794,12 @@
             </LinearLayout>
 
 
-
             <View
                 android:id="@+id/dividerp4"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/Dosage"
                 android:layout_width="match_parent"
@@ -793,6 +807,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/Dosage1"
                     android:layout_width="match_parent"
@@ -811,6 +826,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgDosage"
                         android:layout_width="0dp"
@@ -834,11 +850,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilDosage"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etDosage"
@@ -851,13 +867,12 @@
             </LinearLayout>
 
 
-
-
             <View
                 android:id="@+id/dividerP5"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/AR"
                 android:layout_width="match_parent"
@@ -865,6 +880,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/AR1"
                     android:layout_width="match_parent"
@@ -883,6 +899,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgAR"
                         android:layout_width="0dp"
@@ -906,11 +923,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilAR"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etAR"
@@ -923,14 +940,12 @@
             </LinearLayout>
 
 
-
-
-
             <View
                 android:id="@+id/dividerP6"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/DSE"
                 android:layout_width="match_parent"
@@ -938,6 +953,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/DSE1"
                     android:layout_width="match_parent"
@@ -956,6 +972,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgDSE"
                         android:layout_width="0dp"
@@ -979,11 +996,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilDSE"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etDSE"
@@ -996,14 +1013,12 @@
             </LinearLayout>
 
 
-
-
-
             <View
                 android:id="@+id/dividerP7"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/DI"
                 android:layout_width="match_parent"
@@ -1011,6 +1026,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/DI1"
                     android:layout_width="match_parent"
@@ -1029,6 +1045,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgDI"
                         android:layout_width="0dp"
@@ -1052,11 +1069,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilDI"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etDI"
@@ -1069,14 +1086,12 @@
             </LinearLayout>
 
 
-
-
-
             <View
                 android:id="@+id/dividerP8"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/FI"
                 android:layout_width="match_parent"
@@ -1084,6 +1099,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/FI1"
                     android:layout_width="match_parent"
@@ -1102,6 +1118,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgFI"
                         android:layout_width="0dp"
@@ -1125,11 +1142,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilFI"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etFI"
@@ -1142,15 +1159,12 @@
             </LinearLayout>
 
 
-
-
-
-
             <View
                 android:id="@+id/dividerP9"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/DM"
                 android:layout_width="match_parent"
@@ -1158,6 +1172,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/DM1"
                     android:layout_width="match_parent"
@@ -1176,6 +1191,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgDM"
                         android:layout_width="0dp"
@@ -1199,11 +1215,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilDM"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etDM"
@@ -1216,15 +1232,12 @@
             </LinearLayout>
 
 
-
-
-
-
             <View
                 android:id="@+id/dividerP10"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/DCD"
                 android:layout_width="match_parent"
@@ -1232,6 +1245,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/DCD1"
                     android:layout_width="match_parent"
@@ -1250,6 +1264,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgDCD"
                         android:layout_width="0dp"
@@ -1273,11 +1288,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilDCD"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etDCD"
@@ -1290,15 +1305,12 @@
             </LinearLayout>
 
 
-
-
-
-
             <View
                 android:id="@+id/dividerP11"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/PR"
                 android:layout_width="match_parent"
@@ -1306,6 +1318,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/PR1"
                     android:layout_width="match_parent"
@@ -1324,6 +1337,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgPR"
                         android:layout_width="0dp"
@@ -1347,11 +1361,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilPR"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etPR"
@@ -1368,6 +1382,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <TextView
                 android:id="@+id/tvPHARMACISTINTERVENTION"
                 android:layout_width="match_parent"
@@ -1391,6 +1406,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/DD1"
                     android:layout_width="match_parent"
@@ -1409,6 +1425,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgDD"
                         android:layout_width="0dp"
@@ -1432,11 +1449,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilDD"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etDD"
@@ -1462,6 +1479,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/DS1"
                     android:layout_width="match_parent"
@@ -1480,6 +1498,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgDS"
                         android:layout_width="0dp"
@@ -1503,11 +1522,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilDS"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etDS"
@@ -1525,6 +1544,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/DA"
                 android:layout_width="match_parent"
@@ -1532,6 +1552,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/DA1"
                     android:layout_width="match_parent"
@@ -1550,6 +1571,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgDA"
                         android:layout_width="0dp"
@@ -1573,11 +1595,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilDA"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etDA"
@@ -1590,12 +1612,12 @@
             </LinearLayout>
 
 
-
             <View
                 android:id="@+id/dividerPU4"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/DIncreased"
                 android:layout_width="match_parent"
@@ -1603,6 +1625,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/DIncreased1"
                     android:layout_width="match_parent"
@@ -1621,6 +1644,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgDIncreased"
                         android:layout_width="0dp"
@@ -1644,11 +1668,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilDIncreased"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etDIncreased"
@@ -1661,13 +1685,12 @@
             </LinearLayout>
 
 
-
-
             <View
                 android:id="@+id/dividerPU5"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/DDecreased"
                 android:layout_width="match_parent"
@@ -1675,6 +1698,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/DDecreased1"
                     android:layout_width="match_parent"
@@ -1693,6 +1717,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgDDecreased"
                         android:layout_width="0dp"
@@ -1716,11 +1741,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilDDecreased"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etDDecreased"
@@ -1733,14 +1758,12 @@
             </LinearLayout>
 
 
-
-
-
             <View
                 android:id="@+id/dividerPU6"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/AMO"
                 android:layout_width="match_parent"
@@ -1748,6 +1771,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/AMO1"
                     android:layout_width="match_parent"
@@ -1766,6 +1790,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgAMO"
                         android:layout_width="0dp"
@@ -1789,11 +1814,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilAMO"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etAMO"
@@ -1806,14 +1831,12 @@
             </LinearLayout>
 
 
-
-
-
             <View
                 android:id="@+id/dividerPU7"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/DMO"
                 android:layout_width="match_parent"
@@ -1821,6 +1844,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/DMO1"
                     android:layout_width="match_parent"
@@ -1839,6 +1863,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgDMO"
                         android:layout_width="0dp"
@@ -1862,11 +1887,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilDMO"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etDMO"
@@ -1879,14 +1904,12 @@
             </LinearLayout>
 
 
-
-
-
             <View
                 android:id="@+id/dividerPU8"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <LinearLayout
                 android:id="@+id/CSF"
                 android:layout_width="match_parent"
@@ -1894,6 +1917,7 @@
                 android:layout_margin="8dp"
                 android:orientation="vertical"
                 android:weightSum="6">
+
                 <LinearLayout
                     android:id="@+id/CSF1"
                     android:layout_width="match_parent"
@@ -1912,6 +1936,7 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <RadioGroup
                         android:id="@+id/rgCSF"
                         android:layout_width="0dp"
@@ -1935,11 +1960,11 @@
                             android:text="N" />
                     </RadioGroup>
                 </LinearLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilCSF"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etCSF"
@@ -1950,10 +1975,6 @@
                         android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
-
-
-
-
 
 
             <View
@@ -2033,12 +2054,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilRecommendedRegimen"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:layout_marginEnd="5dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
                 android:layout_marginBottom="8dp"
                 android:padding="5dp">
 
@@ -2056,12 +2078,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilReasonforRecommendation"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:layout_marginEnd="5dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
                 android:layout_marginBottom="8dp"
                 android:padding="5dp">
 
@@ -2076,12 +2099,6 @@
             </com.google.android.material.textfield.TextInputLayout>
 
 
-
-
-
-
-
-
         </LinearLayout>
 
     </ScrollView>
@@ -2093,20 +2110,31 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="30dp"
         android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayouttheropatic1" />
+
     <View
         android:id="@+id/divider10"
         android:layout_width="2dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="30dp"
         android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayouttheropatic1" />
+
+    <TextView
+        android:id="@+id/tvNext2nd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

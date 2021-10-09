@@ -26,5 +26,13 @@
         android:id="@+id/theropotaticFragment"
         android:name="com.pharmacy.atmycare.ui.ATMxLayoutFragments.HomeFrags.TheropotaticFragment"
         android:label="fragment_theropotatic"
-        tools:layout="@layout/fragment_theropotatic" />
+        tools:layout="@layout/fragment_theropotatic" >
+        <action
+            android:id="@+id/action_theropotaticFragment_to_patientCounselingFragment"
+            app:destination="@id/patientCounselingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientCounselingFragment"
+        android:name="com.pharmacy.atmycare.ui.ATMxLayoutFragments.HomeFrags.PatientCounselingFragment"
+        android:label="PatientCounselingFragment" />
 </navigation>
