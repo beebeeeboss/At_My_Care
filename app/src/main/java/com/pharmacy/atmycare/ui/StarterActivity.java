@@ -10,6 +10,9 @@ import android.os.CountDownTimer;
 import android.util.Log;
 
 
+import com.amplifyframework.AmplifyException;
+import com.amplifyframework.auth.cognito.AWSCognitoAuthPlugin;
+import com.amplifyframework.core.Amplify;
 import com.pharmacy.atmycare.Database;
 import com.pharmacy.atmycare.R;
 
@@ -20,6 +23,7 @@ import java.sql.Statement;
 
 public class StarterActivity extends AppCompatActivity  {
 
+    private static Connection c = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,26 +32,26 @@ public class StarterActivity extends AppCompatActivity  {
             @Override
             public void run() {
                 Database db = new Database();
-                Connection c = db.getExtraConnection();
+                c = db.getExtraConnection();
                 while (c == null)
                     c = db.getExtraConnection();
-                takeConnection(c);
             }
         };
         Thread thread = new Thread(r);
         thread.start();
 
-      }
-    public Connection takeConnection(Connection c)
+        // Add this line, to include the Auth plugin.
+        try {
+            Amplify.addPlugin(new AWSCognitoAuthPlugin());
+            Amplify.configure(getApplicationContext());
+        } catch (AmplifyException e) {
+            e.printStackTrace();
+        }
+    }
+    public static Connection takeConnection()
     {
-
-        if(c != null)
-        {
-           return c;
-        }
-        else
-        {
-           return null;
-        }
+        if(c == null)
+            return null;
+        return c;
     }
 }

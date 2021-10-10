@@ -51,4 +51,6 @@ dependencies {
     implementation 'com.github.aabhasr1:OtpView:v1.1.2'
 //for database
     implementation 'org.postgresql:postgresql:42.2.5.jre7'
+    //for OTP
+        implementation 'com.amplifyframework:aws-auth-cognito:1.28.1'
 }
