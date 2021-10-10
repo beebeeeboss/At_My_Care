@@ -124,7 +124,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout24"
-        app:layout_constraintBottom_toTopOf="@id/tvNext1"
+        app:layout_constraintBottom_toTopOf="@id/tvSubmit"
         tools:ignore="SpeakableTextPresentCheck">
 
     <LinearLayout
@@ -276,7 +276,7 @@
             android:id="@+id/tilContNo1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:padding="5dp">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -300,7 +300,7 @@
             android:id="@+id/tilUHID1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:padding="5dp">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -377,17 +377,6 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/llhNS11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:orientation="horizontal"
-            android:weightSum="6">
-
-
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
@@ -397,218 +386,197 @@
                 android:id="@+id/textView57"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="9"
                 android:fontFamily="@font/timmana"
                 android:paddingTop="5dp"
+                android:paddingStart="15dp"
                 android:text="DISEASE/MEDICATION RELATED PROBLEM"
-
                 android:textColor="@android:color/background_dark"
                 android:textSize="20sp"
                 android:textStyle="bold|italic" />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/ll25"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:orientation="horizontal"
-            android:weightSum="6">
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:background="@color/black" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilReasonForCounselling11"
+                android:id="@+id/tilCiitdsac"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="8dp">
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etReasonForCounselling11"
+                    android:id="@+id/etCiitdsac"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:hint="1) Clinical information including the disease rate and considerations"
+                    android:hint="Clinical information including the disease rate and considerations"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilReasonForCounselling21"
+                android:id="@+id/tilLSM"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="8dp">
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etReasonForCounselling21"
+                    android:id="@+id/etLSM"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:hint="2)Life style modifications/NPT/MCS"
+                    android:hint="Life style modifications/NPT/MCS"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilReasonForCounselling20"
+                android:id="@+id/tilDI"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="8dp">
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etReasonForCounselling20"
+                    android:id="@+id/etDI"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:hint="3) Drug introduction/indications"
+                    android:hint="Drug introduction/indications"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilReasonForCounselling29"
+                android:id="@+id/tilWAHYTD"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="8dp">
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etReasonForCounselling29"
+                    android:id="@+id/etWAHYTD"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:hint="4) When and how you take drug "
+                    android:hint="When and how you take drug "
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilReasonForCounselling19"
+                android:id="@+id/tilMissedDose"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="8dp">
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etReasonForCounselling19"
+                    android:id="@+id/etMissedDose"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:hint="5) Missed dose"
+                    android:hint="Missed dose"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilReasonForCounselling18"
+                android:id="@+id/tilDRP"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="8dp">
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etReasonForCounselling18"
+                    android:id="@+id/etDRP"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:hint="6)  Possible AEs/DRP"
+                    android:hint="Possible AEs/DRP"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilReasonForCounselling17"
+                android:id="@+id/tilWTS"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="8dp">
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etReasonForCounselling17"
+                    android:id="@+id/etWTS"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:hint="7) When to stop"
+                    android:hint="When to stop"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilReasonForCounselling16"
+                android:id="@+id/tilStorage"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="8dp">
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etReasonForCounselling16"
+                    android:id="@+id/etStorage"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:hint="8) Storage,how to store drug properly"
+                    android:hint="Storage,how to store drug properly"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilReasonForCounselling15"
+                android:id="@+id/tilFood"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="8dp">
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etReasonForCounselling15"
+                    android:id="@+id/etFood"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:hint="9)  Food/Nutrition condition"
+                    android:hint="Food/Nutrition condition"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilReasonForCounselling14"
+                android:id="@+id/tilDADC"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="8dp">
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etReasonForCounselling14"
+                    android:id="@+id/etDADC"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:hint="10) Do's and don'ts contraindications"
+                    android:hint="Do's and don'ts contraindications"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilReasonForCounselling13"
+                android:id="@+id/tilFollowUp"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="8dp">
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etReasonForCounselling13"
+                    android:id="@+id/etFollowUp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:hint="11) Follow up"
+                    android:hint="Follow up"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilReasonForCounselling12"
+                android:id="@+id/tilContactif"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_margin="8dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etReasonForCounselling12"
+                    android:id="@+id/etContactif"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:hint="12) Contact(if)"
+                    android:hint="Contact(if)"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
-
-
-</LinearLayout>
-
-
     </LinearLayout>
     </ScrollView>
-
-
-
     <View
         android:layout_width="2dp"
         android:layout_height="0dp"
@@ -619,18 +587,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout24" />
-
     <TextView
-        android:id="@+id/tvNext1"
+        android:id="@+id/tvSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="7dp"
-        android:text="Next"
+        android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

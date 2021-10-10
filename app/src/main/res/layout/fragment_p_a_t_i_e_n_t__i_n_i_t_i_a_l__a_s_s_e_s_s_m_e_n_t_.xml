@@ -95,7 +95,7 @@
     </LinearLayout>
 
     <View
-               android:layout_width="match_parent"
+        android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
@@ -105,7 +105,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <View
-                android:layout_width="match_parent"
+        android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
@@ -156,20 +156,10 @@
                         android:hint="Enter Patient Name"
                         android:inputType="textPersonName"
                         android:textColorHint="@color/black" />
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etAddress"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:hint="Enter Address"
-                        android:inputType="textPostalAddress"
-                        android:minHeight="30dp"
-                        android:textColorHint="@color/black" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <View
-                                       android:layout_width="2dp"
+                    android:layout_width="2dp"
                     android:layout_height="match_parent"
                     android:background="@color/black" />
 
@@ -210,7 +200,7 @@
             </LinearLayout>
 
             <View
-                                android:layout_width="match_parent"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
 
@@ -230,10 +220,19 @@
                     android:layout_weight="4"
                     android:padding="5dp">
 
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter Address"
+                        android:inputType="textPostalAddress"
+                        android:minHeight="30dp"
+                        android:textColorHint="@color/black" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <View
-                                        android:layout_width="2dp"
+                    android:layout_width="2dp"
                     android:layout_height="match_parent"
                     android:background="@color/black" />
 
@@ -258,7 +257,7 @@
             </LinearLayout>
 
             <View
-                                android:layout_width="match_parent"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
 
@@ -291,7 +290,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <View
-                                        android:layout_width="2dp"
+                    android:layout_width="2dp"
                     android:layout_height="match_parent"
                     android:background="@color/black" />
 
@@ -313,7 +312,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <View
-                                        android:layout_width="3dp"
+                    android:layout_width="3dp"
                     android:layout_height="match_parent"
                     android:background="@color/black" />
 
@@ -337,7 +336,7 @@
             </LinearLayout>
 
             <View
-                                android:layout_width="match_parent"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
 
@@ -369,7 +368,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <View
-                                        android:layout_width="2dp"
+                    android:layout_width="2dp"
                     android:layout_height="match_parent"
                     android:background="@color/black" />
 
@@ -394,7 +393,7 @@
             </LinearLayout>
 
             <View
-                                android:layout_width="match_parent"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
 
@@ -442,7 +441,7 @@
 
 
                 <View
-                                        android:layout_width="2dp"
+                    android:layout_width="2dp"
                     android:layout_height="match_parent"
                     android:background="@color/black" />
 
@@ -468,7 +467,7 @@
             </LinearLayout>
 
             <View
-                                android:layout_width="match_parent"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
 
@@ -488,7 +487,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <View
-                                android:layout_width="match_parent"
+                android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="@color/black" />
 
@@ -520,7 +519,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <View
-                                        android:layout_width="2dp"
+                    android:layout_width="2dp"
                     android:layout_height="match_parent"
                     android:background="@color/black" />
 
@@ -562,7 +561,7 @@
             </LinearLayout>
 
             <View
-                                android:layout_width="match_parent"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
 
@@ -860,7 +859,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <View
-                                android:layout_width="match_parent"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
 
@@ -993,7 +992,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <View
-                                android:layout_width="match_parent"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
             <com.google.android.material.textfield.TextInputLayout
@@ -1015,7 +1014,7 @@
                     android:textColorHint="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
             <View
-                                android:layout_width="match_parent"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
             <TextView
@@ -1378,7 +1377,7 @@
                     android:textColorHint="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
             <View
-                                android:layout_width="match_parent"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
             <com.google.android.material.textfield.TextInputLayout
@@ -1400,7 +1399,7 @@
                     android:textColorHint="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
             <View
-                                android:layout_width="match_parent"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
             <com.google.android.material.textfield.TextInputLayout
@@ -1423,7 +1422,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <View
-                                android:layout_width="match_parent"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
 
@@ -1439,7 +1438,7 @@
                 android:textColor="@color/black"
                 android:textSize="20sp" />
             <View
-                                android:layout_width="match_parent"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/black" />
             <HorizontalScrollView
@@ -1451,8 +1450,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-            <include
-                layout="@layout/fragment_medication_table_layout"/>
+                    <include
+                        layout="@layout/fragment_medication_table_layout"/>
                 </LinearLayout>
             </HorizontalScrollView>
             <View
@@ -1500,14 +1499,14 @@
                 android:layout_marginBottom="8dp"
                 android:padding="5dp">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etRootCauseAnalysis"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="@android:color/transparent"
-                android:hint="Root Cause Analysis"
-                android:inputType="text"
-                android:textColorHint="@color/black" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etRootCauseAnalysis"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Root Cause Analysis"
+                    android:inputType="text"
+                    android:textColorHint="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
             <View
                 android:layout_width="match_parent"
@@ -2295,13 +2294,14 @@
                     android:background="@android:color/transparent"
                     android:hint="Recommendations"
                     android:inputType="text"
-                    android:textColorHint="@color/black" />
+                    android:textColorHint="@color/black"
+                    tools:ignore="TextContrastCheck,TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
     </ScrollView>
 
     <View
-               android:layout_width="2dp"
+        android:layout_width="2dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
@@ -2312,7 +2312,7 @@
         app:layout_constraintTop_toBottomOf="@id/linearLayout4" />
 
     <View
-                android:layout_width="2dp"
+        android:layout_width="2dp"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
