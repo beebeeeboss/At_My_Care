@@ -19,6 +19,7 @@ import com.pharmacy.atmycare.databinding.FragmentAdminDashboardBinding;
 
 public class AdminDashboardFragment extends Fragment {
     private FragmentAdminDashboardBinding bindings;
+    public static View adminDashBoardView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class AdminDashboardFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        adminDashBoardView = getView();
         bindings.bnAdmin.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

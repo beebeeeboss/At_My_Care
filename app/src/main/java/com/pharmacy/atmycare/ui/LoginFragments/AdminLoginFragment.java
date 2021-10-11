@@ -1,6 +1,8 @@
 package com.pharmacy.atmycare.ui.LoginFragments;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -94,8 +96,10 @@ public class AdminLoginFragment extends Fragment {
 
                     @Override
                     public void onFinish() {
-                        if(canGotoDashBoard)
-                     goToDashBoard();
+                        if(canGotoDashBoard) {
+                            doEntryOnSharedPreferences();
+                            goToDashBoard();
+                        }
                         else {
                             progressDialog.dismiss();
                             showIncorrectCrediantials();
@@ -117,5 +121,15 @@ public class AdminLoginFragment extends Fragment {
         bindings.etAdminUserId.setText("");
         bindings.AdminUserId.setError("Username must be correct");
         bindings.AdminPassward.setError("Password not match");
+    }
+
+    private void doEntryOnSharedPreferences()
+    {
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("Login", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("type","Admin");
+        editor.putString("username",bindings.etAdminUserId.getText().toString());
+        editor.putString("password",bindings.etAdminPassward.getText().toString());
+        editor.commit();
     }
 }

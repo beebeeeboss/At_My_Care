@@ -26,6 +26,7 @@ import com.mukesh.OtpView;
 import com.pharmacy.atmycare.R;
 import com.pharmacy.atmycare.databinding.FragmentLoginBinding;
 import com.pharmacy.atmycare.ui.ATMxLayoutFragments.ATMxDashboardFragment;
+import com.pharmacy.atmycare.ui.StarterActivity;
 
 import in.aabhasjindal.otptextview.OTPListener;
 import in.aabhasjindal.otptextview.OtpTextView;
@@ -49,38 +50,54 @@ public class LoginFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         loginView = getView();
-        if (UserLoginFragment.goTo != null){
-            if (UserLoginFragment.goTo.equals("reg")) {
-                Navigation.findNavController(getActivity().findViewById(R.id.fragmentContainerView2)).navigate(LoginFragmentDirections.actionLoginFragmentToResgisterUserFragment());
-            } else if (UserLoginFragment.goTo.equals("dash")) {
-                Navigation.findNavController(getActivity().findViewById(R.id.fragmentContainerView2)).navigate(LoginFragmentDirections.actionLoginFragmentToUserDashboardFragment());
+        if(StarterActivity.type != null){
+            switch (StarterActivity.type)
+            {
+                case "Admin":
+                    Navigation.findNavController(loginView).navigate(LoginFragmentDirections.actionLoginFragmentToAdminDashboardFragment());
+                    break;
+                case "ATMx":
+                    Navigation.findNavController(loginView).navigate(LoginFragmentDirections.actionLoginFragmentToATMxDashboardFragment());
+                    break;
+                case "User":
+                    Navigation.findNavController(loginView).navigate(LoginFragmentDirections.actionLoginFragmentToUserDashboardFragment());
+                    break;
             }
-        } else {
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.user_type, R.layout.login_spinner_item);
-            adapter.setDropDownViewResource(R.layout.spinner_dialog_item);
-            binding.spLoginType.setAdapter(adapter);
-            binding.spLoginType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    Navigation.findNavController(binding.fragmentContainerView3).navigateUp();
-                    switch (i) {
-                        case 2:
-                            Navigation.findNavController(binding.fragmentContainerView3).navigate(R.id.action_userLoginFragment_to_adminLoginFragment);
-                            break;
-                        case 1:
-                            Navigation.findNavController(binding.fragmentContainerView3).navigate(R.id.action_userLoginFragment_to_ATMxLoginFragment);
-                            break;
-                        case 0:
-                            Navigation.findNavController(binding.fragmentContainerView3).navigateUp();
-                            break;
+        }
+        else {
+            if (UserLoginFragment.goTo != null) {
+                if (UserLoginFragment.goTo.equals("reg")) {
+                    Navigation.findNavController(getActivity().findViewById(R.id.fragmentContainerView2)).navigate(LoginFragmentDirections.actionLoginFragmentToResgisterUserFragment());
+                } else if (UserLoginFragment.goTo.equals("dash")) {
+                    Navigation.findNavController(getActivity().findViewById(R.id.fragmentContainerView2)).navigate(LoginFragmentDirections.actionLoginFragmentToUserDashboardFragment());
+                }
+            } else {
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.user_type, R.layout.login_spinner_item);
+                adapter.setDropDownViewResource(R.layout.spinner_dialog_item);
+                binding.spLoginType.setAdapter(adapter);
+                binding.spLoginType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        Navigation.findNavController(binding.fragmentContainerView3).navigateUp();
+                        switch (i) {
+                            case 2:
+                                Navigation.findNavController(binding.fragmentContainerView3).navigate(R.id.action_userLoginFragment_to_adminLoginFragment);
+                                break;
+                            case 1:
+                                Navigation.findNavController(binding.fragmentContainerView3).navigate(R.id.action_userLoginFragment_to_ATMxLoginFragment);
+                                break;
+                            case 0:
+                                Navigation.findNavController(binding.fragmentContainerView3).navigateUp();
+                                break;
+                        }
                     }
-                }
 
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
 
-                }
-            });
+                    }
+                });
+            }
         }
     }
 }
