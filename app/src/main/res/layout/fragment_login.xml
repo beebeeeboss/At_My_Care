@@ -44,7 +44,7 @@
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="20dp"
         android:background="@android:color/transparent"
         android:dropDownWidth="match_parent"
@@ -54,6 +54,7 @@
         android:textAlignment="center"
         app:flow_horizontalBias="50"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivCILogin" />
 

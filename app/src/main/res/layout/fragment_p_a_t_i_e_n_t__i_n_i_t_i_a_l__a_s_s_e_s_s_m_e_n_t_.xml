@@ -1450,8 +1450,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-            <include
-                layout="@layout/fragment_medication_table_layout"/>
+
+                    <include layout="@layout/fragment_medication_table_layout" />
                 </LinearLayout>
             </HorizontalScrollView>
             <View
