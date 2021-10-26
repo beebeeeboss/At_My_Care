@@ -32,7 +32,6 @@ public class AdminLoginFragment extends Fragment {
 
     private FragmentAdminLoginBinding bindings;
     private boolean canGotoDashBoard = false;
-    private CountDownTimer countDownTimer;
     private ProgressDialog progressDialog;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,7 +55,7 @@ public class AdminLoginFragment extends Fragment {
             }
             else {
                 //checking credentials from server
-                final Connection[] c = {StarterActivity.takeConnection()};
+
                 progressDialog = new ProgressDialog(getContext());
                 progressDialog.setTitle("Please Wait...");
                 progressDialog.setMessage("Signing in...");
@@ -64,51 +63,9 @@ public class AdminLoginFragment extends Fragment {
                 progressDialog.show();
                 String receivedUsername = bindings.etAdminUserId.getText().toString();
                 String receivedPassword = bindings.etAdminPassward.getText().toString();
-                Runnable runnable = new Runnable() {
-                    @Override
-                    public void run() {
-                        while(c[0] == null) {
-                            c[0] = StarterActivity.takeConnection();
-                        }
-                        try {
-                            Statement statement = c[0].createStatement();
-                            ResultSet resultSet = statement.executeQuery("SELECT * FROM pharmaschema.\"Admin\" WHERE username='"+receivedUsername+"' AND password='"+receivedPassword+"'");
-                            while(resultSet.next())
-                            {
-                                canGotoDashBoard = true;
-                                progressDialog.dismiss();
 
-                            }
-                            countDownTimer.start();
-                        } catch (SQLException throwables) {
-                            throwables.printStackTrace();
-                            countDownTimer.start();
-                            progressDialog.dismiss();
-                        }
-                    }
-                };
-                Thread thread = new Thread(runnable);
-                thread.start();
-                countDownTimer = new CountDownTimer(1,1) {
-                    @Override
-                    public void onTick(long l) {
-                    }
-
-                    @Override
-                    public void onFinish() {
-                        if(canGotoDashBoard) {
-                            doEntryOnSharedPreferences();
-                            goToDashBoard();
-                        }
-                        else {
-                            progressDialog.dismiss();
-                            showIncorrectCrediantials();
-                        }
-                    }
-                };
             }
         });
-
     }
 
     private void goToDashBoard()
