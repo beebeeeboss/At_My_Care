@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "902140706290",
+    "project_id": "atmycare-9f277",
+    "storage_bucket": "atmycare-9f277.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902140706290:android:22b80439f59c9e9bfa3f6b",
+        "android_client_info": {
+          "package_name": "com.pharmacy.atmycare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "902140706290-leneb8ip4jhggmf2rhfe64gi7dro1aao.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCepRMWYcEDLTg0Fn6VTDoX5u2bYMwzfH0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "902140706290-leneb8ip4jhggmf2rhfe64gi7dro1aao.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
