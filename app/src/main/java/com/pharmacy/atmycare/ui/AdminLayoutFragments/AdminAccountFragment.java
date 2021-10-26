@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.pharmacy.atmycare.R;
 import com.pharmacy.atmycare.databinding.FragmentAdminAccountBinding;
 import com.pharmacy.atmycare.databinding.FragmentAdminDashboardBinding;
@@ -49,6 +50,7 @@ public class AdminAccountFragment extends Fragment {
         progressDialog.setTitle("Please Wait");
         progressDialog.setMessage("Logging out....");
         progressDialog.show();
+        StarterActivity.auth.signOut();
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("Login", Context.MODE_PRIVATE);
         if(sharedPreferences != null)
         sharedPreferences.edit().clear().commit();

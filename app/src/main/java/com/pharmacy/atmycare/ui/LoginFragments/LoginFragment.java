@@ -1,5 +1,6 @@
 package com.pharmacy.atmycare.ui.LoginFragments;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -36,6 +37,7 @@ public class LoginFragment extends Fragment {
 
     private FragmentLoginBinding binding;
     public static View loginView;
+    public static Context loginContext;
     // use this binding for find view by id purpose
     // like textview as binding.idnamedefinedinresourcefile
     @Override
@@ -50,6 +52,7 @@ public class LoginFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         loginView = getView();
+        loginContext = getContext();
         if(StarterActivity.type != null){
             switch (StarterActivity.type)
             {

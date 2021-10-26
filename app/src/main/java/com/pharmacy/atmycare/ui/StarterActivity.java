@@ -6,12 +6,14 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.pharmacy.atmycare.R;
 
 public class StarterActivity extends AppCompatActivity  {
 
 
     public static String type;
+    public static final FirebaseAuth auth = FirebaseAuth.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

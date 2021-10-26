@@ -15,7 +15,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCanceledListener;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.pharmacy.atmycare.R;
 import com.pharmacy.atmycare.databinding.FragmentAdminLoginBinding;
 import com.pharmacy.atmycare.ui.StarterActivity;
@@ -33,11 +39,13 @@ public class AdminLoginFragment extends Fragment {
     private FragmentAdminLoginBinding bindings;
     private boolean canGotoDashBoard = false;
     private ProgressDialog progressDialog;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         bindings = FragmentAdminLoginBinding.inflate(inflater , container ,  false);
+
         return bindings.getRoot();
     }
 
@@ -63,7 +71,28 @@ public class AdminLoginFragment extends Fragment {
                 progressDialog.show();
                 String receivedUsername = bindings.etAdminUserId.getText().toString();
                 String receivedPassword = bindings.etAdminPassward.getText().toString();
-
+                StarterActivity.auth.signInWithEmailAndPassword(receivedUsername , receivedPassword).
+                        addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        progressDialog.dismiss();
+                        if(task.isSuccessful())
+                        {
+                            doEntryOnSharedPreferences();
+                            goToDashBoard();
+                        }
+                        else
+                        {
+                            showIncorrectCrediantials();
+                        }
+                    }
+                }).addOnCanceledListener(new OnCanceledListener() {
+                    @Override
+                    public void onCanceled() {
+                        progressDialog.dismiss();
+                        Toast.makeText(LoginFragment.loginContext,"Please Check Your Internet Connection", Toast.LENGTH_LONG).show();
+                    }
+                });
             }
         });
     }
