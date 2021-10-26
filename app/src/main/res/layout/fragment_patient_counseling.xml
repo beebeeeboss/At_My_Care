@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ATMxLayoutFragments.HomeFrags.PatientCounselingFragment">
-
+    android:outlineProvider="paddedBounds"
+    >
 
     <LinearLayout
-        android:id="@+id/linearLayout33"
+        android:id="@+id/linearLayoutpatient1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -21,20 +21,20 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/iv_back_Patient_counselling"
+            android:id="@+id/iv_back_Patient_counseling"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:src="@drawable/ic_back" />
 
         <TextView
-            android:id="@+id/textView56"
+            android:id="@+id/textView36"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="9"
             android:fontFamily="@font/timmana"
             android:paddingTop="5dp"
-            android:text="PATIENT COUNSELING FORM"
+            android:text="PATIENT INITIAL ASSESSMENT AND MEDICATION RECONCILIATION FORM"
             android:textAlignment="center"
             android:textColor="@android:color/background_dark"
             android:textSize="20sp"
@@ -42,7 +42,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout24"
+        android:id="@+id/linearLayout4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -52,10 +52,10 @@
         android:weightSum="6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout33">
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutpatient1">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilRegNo1"
+            android:id="@+id/tilRegNo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
@@ -64,7 +64,7 @@
             app:boxBackgroundMode="filled">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etRegNo1"
+                android:id="@+id/etRegNo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -74,14 +74,14 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/textView58"
+            android:id="@+id/textView38"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:clickable="false" />
 
         <TextView
-            android:id="@+id/tvPatientInitialAssessmentDate1"
+            android:id="@+id/tvPatientInitialAssessmentDate"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
@@ -100,7 +100,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:background="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView34"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -112,10 +112,10 @@
         android:background="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView34" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView4" />
 
     <ScrollView
-        android:id="@+id/scrollView34"
+        android:id="@+id/scrollView4"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -123,234 +123,376 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout24"
-        app:layout_constraintBottom_toTopOf="@id/tvSubmit"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintBottom_toTopOf="@id/tvNext"
         tools:ignore="SpeakableTextPresentCheck">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-    <LinearLayout
-        android:id="@+id/llhNS1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:orientation="horizontal"
-        android:weightSum="6">
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilPatientName1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="5dp"
-            android:layout_weight="3">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etPatientName1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:hint="Enter Patient Name"
-                android:inputType="textPersonName"
-                android:textColorHint="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="@color/black" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvS1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Sex:"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <RadioGroup
-            android:id="@+id/rgFM1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/rbMale1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="M" />
-
-            <RadioButton
-                android:id="@+id/rbFemale1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="F" />
-        </RadioGroup>
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@color/black" />
-
-    <LinearLayout
-        android:id="@+id/llhAA1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:orientation="horizontal"
-        android:weightSum="6"
-       >
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilAddress1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:padding="5dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etAddress1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:hint="WARD:"
-                android:inputType="textPostalAddress"
-                android:minHeight="30dp"
-                android:textColorHint="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="@color/black" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilAge1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:padding="5dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etAge1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:hint="Age"
-                android:inputType="number"
-                android:textColorHint="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@color/black" />
-
-    <LinearLayout
-        android:id="@+id/llhCUM1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:orientation="horizontal"
-        android:weightSum="6"
-        >
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilContNo1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:padding="5dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etContNo1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:hint="Cont. No"
-                android:inputType="number"
-                android:maxLength="10"
-                android:minHeight="30dp"
-                android:textColorHint="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="@color/black" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilUHID1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:padding="5dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etUHID1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:hint="UHID"
-                android:inputType="text"
-                android:textColorHint="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
-
-</LinearLayout>
-
-
-
-
-
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@color/black" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilReasonForCounselling1"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_margin="8dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etReasonForCounselling1"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:hint="CHIEF COMPLAINTS/REASON FOR ADMISSION:         (Source of history- self/other……………………….)"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <View
-                                android:layout_width="match_parent"
+            <LinearLayout
+                android:id="@+id/llhNS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPatientName"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPatientName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter Patient Name"
+                        android:inputType="textPersonName"
+                        android:textColorHint="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvS"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Sex:"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rgFM"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="M" />
+
+                    <RadioButton
+                        android:id="@+id/rbFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="F" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/llhAA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:padding="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter Address"
+                        android:inputType="textPostalAddress"
+                        android:minHeight="30dp"
+                        android:textColorHint="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilAge"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:padding="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Age"
+                        android:inputType="number"
+                        android:textColorHint="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/llhCUM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilContNo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:padding="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etContNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Cont. No"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:minHeight="30dp"
+                        android:textColorHint="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilUHID"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:padding="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etUHID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="UHID"
+                        android:inputType="text"
+                        android:textColorHint="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilMLC"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:padding="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMLC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="MLC"
+                        android:inputType="text"
+                        android:textColorHint="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/llhDRNA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDRName"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:padding="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDrName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Doctor Name"
+                        android:inputType="textPersonName"
+                        android:minHeight="30dp"
+                        android:textColorHint="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDrAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:padding="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDrAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Dr. Address"
+                        android:inputType="textPostalAddress"
+                        android:textColorHint="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/llhICN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvInsurance"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="Insurance:"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rgInsurance"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Y" />
+
+                    <RadioButton
+                        android:id="@+id/rbNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N" />
+                </RadioGroup>
+
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCompName"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="2"
+                    android:padding="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCompName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Comp Name"
+                        android:inputType="text"
+                        android:textColorHint="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilReasonForCounselling"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etReasonForCounselling"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="CHIEF COMPLAINTS/REASON FOR COUNSELING:         (Source of history- self/other……………………….)"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <View
+                android:id="@+id/divider22"
+                android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="@color/black" />
 
             <LinearLayout
-                android:id="@+id/llhICDAllergy1"
+                android:id="@+id/llDiagnosisWithICD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -363,7 +505,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="5dp"
-                    android:layout_weight="6"
+                    android:layout_weight="3"
                     android:padding="5dp">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -376,223 +518,658 @@
                         android:textColorHint="@color/black" />
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <View
+                    android:id="@+id/divider23"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilICDCode2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="3"
+                    android:padding="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etICDCode2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Source of history-Self/Other:"
+                        android:inputType="number"
+                        android:textColorHint="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="@color/black" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black" />
             <TextView
-                android:id="@+id/textView57"
+                android:id="@+id/tvPersonalHisto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/timmana"
-                android:paddingTop="5dp"
-                android:paddingStart="15dp"
-                android:text="DISEASE/MEDICATION RELATED PROBLEM"
-                android:textColor="@android:color/background_dark"
-                android:textSize="20sp"
-                android:textStyle="bold|italic" />
+                android:fontFamily="@font/lato"
+                android:paddingStart="7dp"
+                android:text="DISEASE/MEDICATION RELATED RECOMMENDATION:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilCiitdsac"
+            <View
+                android:id="@+id/dividerP1"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/CII"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etCiitdsac"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/CII1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
-                    android:hint="Clinical information including the disease rate and considerations"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCII"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="1)Clinical information including the disease state and consideration :"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCII"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCII"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
 
 
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilLSM"
+            <View
+                android:id="@+id/dividerP2"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/LSM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etLSM"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/LSM1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
-                    android:hint="Life style modifications/NPT/MCS"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilDI"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvLSM"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="2)Life style modification/NPT/MCS:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilLSM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etLSM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/dividerP3"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/DII"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etDI"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/DII1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
-                    android:hint="Drug introduction/indications"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilWAHYTD"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDII"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="3) Drug introduction/indication:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDII"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDII"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+            <View
+                android:id="@+id/dividerp4"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/WHD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etWAHYTD"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/WHD1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
-                    android:hint="When and how you take drug "
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilMissedDose"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvWHD"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="4) When and how you take drug:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilWHD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etWHD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+
+            <View
+                android:id="@+id/dividerP5"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/MD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etMissedDose"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/MD1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
-                    android:hint="Missed dose"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilDRP"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMD"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="5) Missed dose:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilMD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/dividerP6"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/PAD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etDRP"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/PAD1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
-                    android:hint="Possible AEs/DRP"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilWTS"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPAD"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="6)Possible AEs/DRP:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPAD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPAD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/dividerP7"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/WAS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etWTS"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/WAS1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
-                    android:hint="When to stop"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilStorage"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvWAS"
+                        android:layout_width="313dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="7)When to stop:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilWAS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etWAS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/dividerP8"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/SSD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etStorage"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/SSD1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
-                    android:hint="Storage,how to store drug properly"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilFood"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSSD"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="8)Storage, how to store drug properly:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilSSD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSSD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/dividerP9"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/FNC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etFood"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/FNC1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
-                    android:hint="Food/Nutrition condition"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilDADC"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFNC"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="9)Food/Nutrition consideration:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilFNC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etFNC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/dividerP10"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/DDC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etDADC"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/DDC1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
-                    android:hint="Do's and don'ts contraindications"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilFollowUp"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDDC"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="10)Do and Don't s Contraindication:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDDC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDDC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/dividerP11"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/FU"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etFollowUp"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/FU1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
-                    android:hint="Follow up"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilContactif"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFU"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="11)Follow up:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilFU"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etFU"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/dividerP12"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="8dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etContactif"
+                android:layout_height="3dp"
+                android:background="@color/black" />
+            <LinearLayout
+                android:id="@+id/CIF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+                <LinearLayout
+                    android:id="@+id/CIF1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
-                    android:hint="Contact(if)"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCIF"
+                        android:layout_width="168dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="12)Contact (if):"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCIF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCIF"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint=". . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . ."
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
     </ScrollView>
-    <View
-        android:layout_width="2dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="21dp"
-        android:background="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout24" />
     <TextView
-        android:id="@+id/tvSubmit"
+        android:id="@+id/tvNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="7dp"
-        android:text="Submit"
+        android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
