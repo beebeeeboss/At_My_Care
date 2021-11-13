@@ -1,9 +1,11 @@
 package com.pharmacy.atmycare.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentContainerView;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,4 +35,6 @@ public class StarterActivity extends AppCompatActivity  {
             }
         }
     }
+
+
 }
