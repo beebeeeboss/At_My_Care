@@ -18,7 +18,7 @@ import com.pharmacy.atmycare.databinding.FragmentAdminDashboardBinding;
 
 
 public class AdminDashboardFragment extends Fragment {
-    private FragmentAdminDashboardBinding bindings;
+    public  static  FragmentAdminDashboardBinding bindings;
     public static View adminDashBoardView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
