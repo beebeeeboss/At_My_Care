@@ -9,5 +9,26 @@
         android:id="@+id/admin_HOME_MAINFragment"
         android:name="com.pharmacy.atmycare.ui.AdminLayoutFragments.HomeFragments.Admin_HOME_MAINFragment"
         android:label="fragment_admin__h_o_m_e__m_a_i_n"
-        tools:layout="@layout/fragment_admin__h_o_m_e__m_a_i_n" />
+        tools:layout="@layout/fragment_admin__h_o_m_e__m_a_i_n" >
+        <action
+            android:id="@+id/action_admin_HOME_MAINFragment_to_add_NewATMX_Fragment"
+            app:destination="@id/add_NewATMX_Fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_admin_HOME_MAINFragment_to_admin_ManageStocksFragment"
+            app:destination="@id/admin_ManageStocksFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/add_NewATMX_Fragment"
+        android:name="com.pharmacy.atmycare.ui.AdminLayoutFragments.HomeFragments.Add_NewATMX_Fragment"
+        android:label="fragment_add__new_a_t_m_x_"
+        tools:layout="@layout/fragment_add__new_a_t_m_x_" />
+    <fragment
+        android:id="@+id/admin_ManageStocksFragment"
+        android:name="com.pharmacy.atmycare.ui.AdminLayoutFragments.HomeFragments.Admin_ManageStocksFragment"
+        android:label="fragment_admin__manage_stocks"
+        tools:layout="@layout/fragment_admin__manage_stocks" />
 </navigation>
