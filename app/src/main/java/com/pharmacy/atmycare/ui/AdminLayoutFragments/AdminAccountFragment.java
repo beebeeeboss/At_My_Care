@@ -2,6 +2,7 @@ package com.pharmacy.atmycare.ui.AdminLayoutFragments;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
@@ -16,11 +17,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.pharmacy.atmycare.R;
 import com.pharmacy.atmycare.databinding.FragmentAdminAccountBinding;
-import com.pharmacy.atmycare.databinding.FragmentAdminDashboardBinding;
-import com.pharmacy.atmycare.ui.LoginFragments.LoginFragment;
+import com.pharmacy.atmycare.ui.LoginFragments.AdminLoginFragment;
 import com.pharmacy.atmycare.ui.StarterActivity;
 
 public class AdminAccountFragment extends Fragment {
@@ -51,11 +49,12 @@ public class AdminAccountFragment extends Fragment {
         progressDialog.setMessage("Logging out....");
         progressDialog.show();
         StarterActivity.auth.signOut();
-        SharedPreferences sharedPreferences = getContext().getSharedPreferences("Login", Context.MODE_PRIVATE);
-        if(sharedPreferences != null)
-        sharedPreferences.edit().clear().commit();
-        progressDialog.dismiss();
-        Navigation.findNavController(AdminDashboardFragment.adminDashBoardView).navigate(AdminDashboardFragmentDirections.actionAdminDashboardFragmentToLoginFragment());
-
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("Login", Context.MODE_PRIVATE);
+        if(sharedPreferences != null) {
+            sharedPreferences.edit().clear().apply();
+            progressDialog.dismiss();
+            StarterActivity.type = null;
+            Navigation.findNavController(AdminDashboardFragment.adminDashBoardView).navigate(AdminDashboardFragmentDirections.actionAdminDashboardFragmentToLoginFragment());
+        }
     }
 }
