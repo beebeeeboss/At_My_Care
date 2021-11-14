@@ -19,7 +19,7 @@ import com.pharmacy.atmycare.databinding.FragmentATMxLoginBinding;
 public class ATMxDashboardFragment extends Fragment {
 
     public static FragmentATMxDashboardBinding binding;
-
+    public static View atmxDashboardView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -31,6 +31,7 @@ public class ATMxDashboardFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        atmxDashboardView = getView();
         binding.bnATMX.setOnNavigationItemSelectedListener(item ->
         {
             switch (item.getItemId()) {
