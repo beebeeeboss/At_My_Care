@@ -33,5 +33,7 @@ public class Admin_HOME_MAINFragment extends Fragment {
         AdminDashboardFragment.bindings.bnAdmin.setVisibility(View.VISIBLE);
         bindings.cvAdminAddATMx.setOnClickListener(v->
                 Navigation.findNavController(v).navigate(Admin_HOME_MAINFragmentDirections.actionAdminHOMEMAINFragmentToAddNewATMXFragment()));
+        bindings.cvAdminManageATMx.setOnClickListener(v->
+                Navigation.findNavController(v).navigate(Admin_HOME_MAINFragmentDirections.actionAdminHOMEMAINFragmentToAdminManageATMxsFragment()));
     }
 }

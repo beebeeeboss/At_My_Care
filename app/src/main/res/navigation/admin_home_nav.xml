@@ -20,6 +20,9 @@
             app:destination="@id/admin_ManageStocksFragment"
             app:enterAnim="@android:anim/fade_in"
             app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_admin_HOME_MAINFragment_to_admin_ManageATMxs_Fragment"
+            app:destination="@id/admin_ManageATMxs_Fragment" />
     </fragment>
     <fragment
         android:id="@+id/add_NewATMX_Fragment"
@@ -31,4 +34,9 @@
         android:name="com.pharmacy.atmycare.ui.AdminLayoutFragments.HomeFragments.Admin_ManageStocksFragment"
         android:label="fragment_admin__manage_stocks"
         tools:layout="@layout/fragment_admin__manage_stocks" />
+    <fragment
+        android:id="@+id/admin_ManageATMxs_Fragment"
+        android:name="com.pharmacy.atmycare.ui.AdminLayoutFragments.HomeFragments.Admin_ManageATMxs_Fragment"
+        android:label="fragment_admin__manage_a_t_mxs_"
+        tools:layout="@layout/fragment_admin__manage_a_t_mxs_" />
 </navigation>
