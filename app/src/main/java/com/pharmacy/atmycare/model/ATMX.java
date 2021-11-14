@@ -7,6 +7,9 @@ public class ATMX {
     private String address;
     private long mobileNo;
 
+    public ATMX() {
+    }
+
     public ATMX(String name, String userid, String password, String address, long mobileNo) {
         this.name = name;
         this.userid = userid;

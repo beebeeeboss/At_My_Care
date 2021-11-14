@@ -59,7 +59,7 @@ public class LoginFragment extends Fragment {
                 case "Admin":
                     Navigation.findNavController(loginView).navigate(LoginFragmentDirections.actionLoginFragmentToAdminDashboardFragment());
                     break;
-                case "ATMx":
+                case "Atmx":
                     Navigation.findNavController(loginView).navigate(LoginFragmentDirections.actionLoginFragmentToATMxDashboardFragment());
                     break;
                 case "User":
